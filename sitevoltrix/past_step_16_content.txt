@@ -1,0 +1,147 @@
+﻿Created At: 2026-05-28T20:12:57Z
+Completed At: 2026-05-28T20:12:57Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/styles.css`
+Total Lines: 1896
+Total Bytes: 37120
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: /* Custom Design System for VOLTRIX STORE */
+2: 
+3: @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap');
+4: 
+5: :root {
+6:   --primary: 263 90% 52%; /* Violet/Purple */
+7:   --primary-glow: 263 90% 52% / 0.15;
+8:   --secondary: 217 91% 60%; /* Neon Blue */
+9:   --background: 240 10% 4%; /* Near Black Deep Slate */
+10:   --card: 240 10% 6% / 0.7;
+11:   --foreground: 0 0% 98%;
+12:   --muted: 240 5% 15% / 0.5;
+13:   --muted-foreground: 240 5% 65%;
+14:   --border: 240 5% 15% / 0.6;
+15:   --accent: 45 93% 47%; /* Gold Accent */
+16:   --radius: 12px;
+17:   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+18: }
+19: 
+20: /* Base resets & styles */
+21: * {
+22:   box-sizing: border-box;
+23:   margin: 0;
+24:   padding: 0;
+25:   border-color: rgba(255, 255, 255, 0.05);
+26: }
+27: 
+28: html {
+29:   scroll-behavior: smooth;
+30:   overflow-x: hidden;
+31: }
+32: 
+33: body {
+34:   font-family: 'Geist', 'Outfit', sans-serif;
+35:   background-color: hsl(var(--background));
+36:   color: hsl(var(--foreground));
+37:   min-h: 100vh;
+38:   display: flex;
+39:   flex-direction: column;
+40:   line-height: 1.5;
+41:   -webkit-font-smoothing: antialiased;
+42:   background-image: 
+43:     radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+44:     radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 45%);
+45:   background-attachment: fixed;
+46: }
+47: 
+48: a {
+49:   color: inherit;
+50:   text-decoration: none;
+51: }
+52: 
+53: button {
+54:   cursor: pointer;
+55:   font-family: inherit;
+56:   bac
+<truncated 16235 bytes>
+nimation: feedback-marquee 30s linear infinite;
+721: }
+722: 
+723: @keyframes feedback-marquee {
+724:   0% { transform: translateX(0); }
+725:   100% { transform: translateX(-50%); }
+726: }
+727: 
+728: .feedback-card {
+729:   width: 320px;
+730:   background-color: rgba(255, 255, 255, 0.02);
+731:   border: 1px solid rgba(255, 255, 255, 0.04);
+732:   border-radius: 12px;
+733:   padding: 1rem;
+734:   transition: var(--transition);
+735:   flex-shrink: 0;
+736:   display: flex;
+737:   flex-direction: column;
+738:   gap: 0.5rem;
+739: }
+740: 
+741: .feedback-card:hover {
+742:   border-color: rgba(139, 92, 246, 0.25);
+743:   background-color: rgba(255, 255, 255, 0.04);
+744: }
+745: 
+746: .feedback-user-info {
+747:   display: flex;
+748:   align-items: flex-start;
+749:   gap: 0.75rem;
+750: }
+751: 
+752: .feedback-avatar {
+753:   width: 2.5rem;
+754:   height: 2.5rem;
+755:   border-radius: 50%;
+756:   object-fit: cover;
+757:   border: 1px solid rgba(139, 92, 246, 0.2);
+758: }
+759: 
+760: .feedback-details {
+761:   flex: 1;
+762:   min-width: 0;
+763: }
+764: 
+765: .feedback-meta {
+766:   display: flex;
+767:   align-items: center;
+768:   justify-content: space-between;
+769:   gap: 0.5rem;
+770:   margin-bottom: 0.2rem;
+771: }
+772: 
+773: .feedback-username {
+774:   font-weight: 600;
+775:   font-size: 0.875rem;
+776:   color: hsl(var(--foreground));
+777:   overflow: hidden;
+778:   text-overflow: ellipsis;
+779:   white-space: nowrap;
+780: }
+781: 
+782: .feedback-platform-badge {
+783:   display: inline-flex;
+784:   align-items: center;
+785:   gap: 0.25rem;
+786:   font-size: 0.75rem;
+787:   color: hsl(var(--muted-foreground));
+788: }
+789: 
+790: .feedback-time {
+791:   font-size: 0.75rem;
+792:   color: hsl(var(--muted-foreground));
+793: }
+794: 
+795: .feedback-stars {
+796:   display: flex;
+797:   align-items: center;
+798:   color: #ffb800;
+799:   gap: 2px;
+800: }
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

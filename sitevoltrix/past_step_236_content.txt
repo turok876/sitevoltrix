@@ -1,0 +1,74 @@
+﻿Created At: 2026-05-29T01:12:25Z
+Completed At: 2026-05-29T01:12:25Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/index.html`
+Total Lines: 884
+Total Bytes: 59963
+Showing lines 120 to 200
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+120:                 <div class="support-channel-left">
+121:                   <i data-lucide="mail" style="color: #ef4444; width: 1rem; height: 1rem;"></i>
+122:                   <span>E-mail</span>
+123:                 </div>
+124:                 <i data-lucide="external-link" style="width: 0.8rem; height: 0.8rem; opacity: 0.6;"></i>
+125:               </a>
+126:             </div>
+127:           </div>
+128:         </div>
+129: 
+130:         <!-- Access button -->
+131:         <button class="btn btn-secondary" onclick="showToast('Ãrea do Cliente em breve!')">
+132:           <i data-lucide="user" style="width: 1.1rem; height: 1.1rem;"></i>
+133:           <span style="display: inline;" class="hide-mobile">Entrar</span>
+134:         </button>
+135:         <style>
+136:           @media (max-width: 640px) {
+137:             .hide-mobile { display: none !important; }
+138:           }
+139:         </style>
+140: 
+141:         <!-- Cart Button -->
+142:         <button class="btn btn-primary open-cart-btn" style="position: relative;" id="header-cart-button">
+143:           <i data-lucide="shopping-cart" style="width: 1.1rem; height: 1.1rem;"></i>
+144:           <span class="hide-mobile">Carrinho</span>
+145:           <span class="cart-badge cart-btn-badge" style="display: none;">0</span>
+146:         </button>
+147:       </div>
+148:     </div>
+149:   </header>
+150: 
+151:   <!-- Mobile Search Bar -->
+152:   <div class="container" style="padding-top: 1rem; padding-bottom: 0.5rem;" id="search-container-mobile">
+153:     <div class="search-container" style="max-width: 100%;">
+154:       <i dat
+<truncated 778 bytes>
+ class="rating-badge">
+173:           <span class="rating-stars">
+174:             <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+175:             <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+176:             <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+177:             <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+178:             <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+179:           </span>
+180:           <span style="font-weight: 700;">4.9</span>
+181:           <span style="opacity: 0.4;">|</span>
+182:           <span>+50 Mil avaliaÃ§Ãµes no Discord</span>
+183:           <i data-lucide="chevron-right" style="width: 0.85rem; height: 0.85rem;"></i>
+184:         </a>
+185: 
+186:         <!-- Hero text -->
+187:         <h1 class="hero-title">Bem-vindo(a) Ã  <span class="gradient-text-purple">VOLTRIX STORE</span>!</h1>
+188:         <p class="hero-description">Tudo em um sÃ³ lugar: codiguin de skins, contas premium, sensi VIP de Free Fire e painÃ©is de alto nÃ­vel. Compra rÃ¡pida, segura e com entrega 100% automÃ¡tica imediata.</p>
+189: 
+190:         <!-- CTA buttons -->
+191:         <div class="hero-cta">
+192:           <a href="https://discord.gg/HZpTfpk5ZA" target="_blank" class="btn btn-primary" style="height: 2.75rem;">
+193:             <i data-lucide="message-square" style="width: 1.15rem; height: 1.15rem;"></i>
+194:             Comunidade Discord
+195:           </a>
+196:           <a href="#store" class="btn btn-secondary" style="height: 2.75rem;">
+197:             <i data-lucide="shopping-bag" style="width: 1.15rem; height: 1.15rem;"></i>
+198:             Explorar Produtos
+199:           </a>
+200:         </div>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

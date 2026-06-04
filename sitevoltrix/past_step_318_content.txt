@@ -1,0 +1,73 @@
+﻿Created At: 2026-05-29T01:36:03Z
+Completed At: 2026-05-29T01:36:03Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/index.html`
+Total Lines: 1065
+Total Bytes: 71863
+Showing lines 1 to 90
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <!DOCTYPE html>
+2: <html lang="pt-BR">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:   <meta name="robots" content="index, follow" />
+7:   
+8:   <!-- SEO Tags -->
+9:   <title>VOLTRIX STORE - A melhor loja de produtos digitais</title>
+10:   <meta name="description" content="A melhor loja de produtos digitais com entrega imediata e suporte eficiente. Codiguin, contas, sensi VIP e muito mais." />
+11:   <meta property="og:type" content="website" />
+12:   <meta property="og:title" content="VOLTRIX STORE - Home" />
+13:   <meta property="og:description" content="A melhor loja de produtos digitais com entrega imediata e suporte eficiente." />
+14:   <meta property="og:site_name" content="VOLTRIX STORE" />
+15:   
+16:   <!-- Favicon -->
+17:   <link rel="icon" type="image/png" href="https://cdn.centralcart.io/stores/13902/theme/f35647c1-8f1f-437f-b02b-0e082db335ae.png" />
+18:   
+19:   <!-- Stylesheets -->
+20:   <link rel="stylesheet" href="styles.css">
+21:   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+22: </head>
+23: <body>
+24: 
+25:   <!-- Floating Background Glows -->
+26:   <div style="position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: -1;">
+27:     <div style="position: absolute; top: -10%; left: -10%; width: 40rem; height: 40rem; border-radius: 50%; background: radial-gradient(circle, rgba(2, 226, 255, 0.1) 0%, transparent 70%); filter: blur(50px);"></div>
+28:     <div style="position: absolute; top: -10%; right: -10%; width: 50rem
+<truncated 1680 bytes>
+"display: none;" id="search-container-desktop">
+57:         <i data-lucide="search" class="search-icon"></i>
+58:         <input type="text" id="search-bar" class="search-input" placeholder="Buscar produto digital..." autocomplete="off">
+59:         <div class="search-results" id="search-results"></div>
+60:       </div>
+61:       
+62:       <!-- Enable search display dynamic script helper -->
+63:       <script>
+64:         document.addEventListener('DOMContentLoaded', () => {
+65:           if (window.innerWidth > 768) {
+66:             document.getElementById('search-container-desktop').style.display = 'block';
+67:           }
+68:         });
+69:       </script>
+70: 
+71:       <!-- Nav Actions -->
+72:       <div class="nav-actions">
+73:         <!-- Support menu trigger -->
+74:         <div class="support-dropdown-container">
+75:           <button class="btn btn-secondary btn-icon" id="support-button" title="Canais de Suporte">
+76:             <i data-lucide="headset" style="width: 1.15rem; height: 1.15rem;"></i>
+77:           </button>
+78:           
+79:           <!-- Support dropdown menu -->
+80:           <div class="support-menu" id="support-menu">
+81:             <div class="support-menu-header">
+82:               <i data-lucide="headset" style="color: #02e2ff; width: 1.1rem; height: 1.1rem;"></i>
+83:               <span>Canais de Atendimento</span>
+84:             </div>
+85:             
+86:             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+87:               <a href="https://wa.me/554398237466?text=OlÃ¡,%20vim%20do%20site%20e%20preciso%20de%20ajuda!" target="_blank" class="support-channel">
+88:                 <div class="support-channel-left">
+89:                   <i data-lucide="message-square" style="color: #25d366; width: 1rem; height: 1rem;"></i>
+90:                   <span>WhatsApp</span>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

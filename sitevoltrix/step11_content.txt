@@ -1,0 +1,157 @@
+﻿Created At: 2026-06-04T11:02:37Z
+Completed At: 2026-06-04T11:02:37Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/styles.css`
+Total Lines: 2375
+Total Bytes: 46929
+Showing lines 944 to 1743
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+944:   box-shadow: 0 10px 30px rgba(92, 228, 246, 0.15);
+945: }
+946: 
+947: .product-badge-discount {
+948:   position: absolute;
+949:   top: 0.75rem;
+950:   left: 0.75rem;
+951:   background-color: #ef4444;
+952:   color: white;
+953:   font-size: 0.75rem;
+954:   font-weight: 800;
+955:   padding: 0.2rem 0.5rem;
+956:   border-radius: 6px;
+957:   z-index: 5;
+958:   box-shadow: 0 2px 10px rgba(239, 68, 68, 0.4);
+959: }
+960: 
+961: .product-img-wrapper {
+962:   aspect-ratio: 16 / 10;
+963:   width: 100%;
+964:   overflow: hidden;
+965:   position: relative;
+966:   background-color: rgba(255, 255, 255, 0.02);
+967: }
+968: 
+969: .product-img-wrapper::after {
+970:   content: "";
+971:   position: absolute;
+972:   inset: 0;
+973:   background: linear-gradient(110deg, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.15) 50%, transparent 60%, transparent 100%);
+974:   transform: translateX(-120%);
+975:   transition: transform 0.6s ease;
+976:   pointer-events: none;
+977: }
+978: 
+979: .product-card:hover .product-img-wrapper::after {
+980:   transform: translateX(120%);
+981: }
+982: 
+983: .product-img {
+984:   width: 100%;
+985:   height: 100%;
+986:   object-fit: cover;
+987:   transition: var(--transition);
+988: }
+989: 
+990: .product-card:hover .product-img {
+991:   transform: scale(1.04);
+992: }
+993: 
+994: .product-info {
+995:   padding: 1rem;
+996:   display: flex;
+997:   flex-direction: column;
+998:   flex: 1;
+999: }
+1000: 
+1001: .product-name {
+1002:   font-size: 0.95rem;
+1003:   font-weight: 700;
+1004:   margin-bottom: 0.75rem;
+1005:   line-height: 1.35;
+1006:   display: -webkit-box;
+1007:   -we
+<truncated 16721 bytes>
+color: hsl(var(--muted-foreground));
+1662:   display: flex;
+1663:   align-items: center;
+1664:   overflow: hidden;
+1665:   text-overflow: ellipsis;
+1666:   white-space: nowrap;
+1667: }
+1668: 
+1669: .pix-copy-btn {
+1670:   background-color: hsl(var(--primary));
+1671:   color: white;
+1672:   font-weight: 600;
+1673:   font-size: 0.8rem;
+1674:   padding: 0 1rem;
+1675:   display: flex;
+1676:   align-items: center;
+1677:   gap: 0.25rem;
+1678: }
+1679: 
+1680: .pix-timer {
+1681:   font-size: 0.85rem;
+1682:   color: hsl(var(--muted-foreground));
+1683:   margin-top: 0.5rem;
+1684: }
+1685: 
+1686: .pix-timer-count {
+1687:   color: #ef4444;
+1688:   font-weight: 700;
+1689: }
+1690: 
+1691: /* Coupon applying container */
+1692: .coupon-input-container {
+1693:   display: flex;
+1694:   gap: 0.5rem;
+1695:   margin-bottom: 1rem;
+1696: }
+1697: 
+1698: .coupon-input {
+1699:   flex: 1;
+1700: }
+1701: 
+1702: .coupon-apply-btn {
+1703:   height: 2.75rem;
+1704: }
+1705: 
+1706: .coupon-feedback {
+1707:   font-size: 0.8rem;
+1708:   font-weight: 600;
+1709:   min-height: 1.25rem;
+1710: }
+1711: 
+1712: .coupon-feedback.success { color: #10b981; }
+1713: .coupon-feedback.error { color: #ef4444; }
+1714: 
+1715: /* FOOTER SECTION */
+1716: footer {
+1717:   background-color: rgba(7, 7, 10, 0.8);
+1718:   backdrop-filter: blur(12px);
+1719:   border-top: 1px solid rgba(255, 255, 255, 0.08);
+1720:   padding: 4rem 0 2rem;
+1721:   margin-top: auto;
+1722:   position: relative;
+1723: }
+1724: 
+1725: .footer-grid {
+1726:   display: grid;
+1727:   grid-template-columns: 1.5fr 1fr 1fr;
+1728:   gap: 3rem;
+1729:   margin-bottom: 3rem;
+1730: }
+1731: 
+1732: @media (max-width: 768px) {
+1733:   .footer-grid {
+1734:     grid-template-columns: 1fr;
+1735:     gap: 2rem;
+1736:   }
+1737: }
+1738: 
+1739: .footer-brand {
+1740:   display: flex;
+1741:   flex-direction: column;
+1742:   gap: 1rem;
+1743: }
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

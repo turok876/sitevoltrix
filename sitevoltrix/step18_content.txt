@@ -1,0 +1,21 @@
+﻿Created At: 2026-06-04T11:02:56Z
+Completed At: 2026-06-04T11:02:56Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/index.html`
+Total Lines: 1065
+Total Bytes: 71863
+Showing lines 1054 to 1065
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1054:   <button id="admin-fab" style="display:none; position:fixed; bottom:1.5rem; right:1.5rem; z-index:9990; width:3.25rem;height:3.25rem;border-radius:50%;background:linear-gradient(135deg,#02e2ff,#3b82f6);box-shadow:0 4px 20px rgba(2,226,255,0.4);border:none;cursor:pointer;align-items:center;justify-content:center;" onclick="openAdminProductModal(null)" title="Adicionar produto">
+1055:     <i data-lucide="plus" style="width:1.4rem;height:1.4rem;color:#fff;"></i>
+1056:   </button>
+1057: 
+1058:   <!-- Scripts -->
+1059: 
+1060:   <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+1061:   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+1062:   <script src="app.js"></script>
+1063: </body>
+1064: </html>
+1065: 
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

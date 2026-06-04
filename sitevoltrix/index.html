@@ -1,0 +1,1097 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow" />
+  
+  <!-- SEO Tags -->
+  <title>VOLTRIX STORE - A melhor loja de produtos digitais</title>
+  <meta name="description" content="A melhor loja de produtos digitais com entrega imediata e suporte eficiente. Codiguin, contas, sensi VIP e muito mais." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VOLTRIX STORE - Home" />
+  <meta property="og:description" content="A melhor loja de produtos digitais com entrega imediata e suporte eficiente." />
+  <meta property="og:site_name" content="VOLTRIX STORE" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://cdn.centralcart.io/stores/13902/theme/f35647c1-8f1f-437f-b02b-0e082db335ae.png" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+
+  <!-- Floating Background Glows -->
+  <div style="position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: -1;">
+    <div style="position: absolute; top: -10%; left: -10%; width: 40rem; height: 40rem; border-radius: 50%; background: radial-gradient(circle, rgba(2, 226, 255, 0.1) 0%, transparent 70%); filter: blur(50px);"></div>
+    <div style="position: absolute; top: -10%; right: -10%; width: 50rem; height: 50rem; border-radius: 50%; background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%); filter: blur(60px);"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-nav">
+      <!-- Logo -->
+      <a href="/" class="logo-container" id="header-logo-link">
+        <svg viewBox="0 0 100 100" class="logo-img" style="background-color: #0b0a14; padding: 6px; border: 1px solid rgba(2, 226, 255, 0.3); box-shadow: 0 0 15px rgba(2, 226, 255, 0.4); border-radius: 8px;">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#02e2ff" />
+              <stop offset="100%" stop-color="#3b82f6" />
+            </linearGradient>
+          </defs>
+          <polygon points="50,15 80,30 80,65 50,85 20,65 20,30" fill="url(#logo-grad)" fill-opacity="0.1" stroke="url(#logo-grad)" stroke-width="4"/>
+          <path d="M38 35 H48 C55 35, 55 48, 48 48 H38 Z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M52 35 L68 65 M68 35 L52 65" fill="none" stroke="#02e2ff" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text">
+          <span>VOLTRIX STORE</span>
+          <span class="verified-badge" title="Loja Oficial Verificada">
+            <i data-lucide="badge-check" style="fill: #3b82f6; color: #fff; width: 1.25rem; height: 1.25rem;"></i>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Search Bar -->
+      <div class="search-container" style="display: none;" id="search-container-desktop">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="search-bar" class="search-input" placeholder="Buscar produto digital..." autocomplete="off">
+        <div class="search-results" id="search-results"></div>
+      </div>
+      
+      <!-- Enable search display dynamic script helper -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          if (window.innerWidth > 768) {
+            document.getElementById('search-container-desktop').style.display = 'block';
+          }
+        });
+      </script>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Support menu trigger -->
+        <div class="support-dropdown-container">
+          <button class="btn btn-secondary btn-icon" id="support-button" title="Canais de Suporte">
+            <i data-lucide="headset" style="width: 1.15rem; height: 1.15rem;"></i>
+          </button>
+          
+          <!-- Support dropdown menu -->
+          <div class="support-menu" id="support-menu">
+            <div class="support-menu-header">
+              <i data-lucide="headset" style="color: #02e2ff; width: 1.1rem; height: 1.1rem;"></i>
+              <span>Canais de Atendimento</span>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+              <a href="https://wa.me/554398237466?text=OlÃ¡,%20vim%20do%20site%20e%20preciso%20de%20ajuda!" target="_blank" class="support-channel">
+                <div class="support-channel-left">
+                  <i data-lucide="message-square" style="color: #25d366; width: 1rem; height: 1rem;"></i>
+                  <span>WhatsApp</span>
+                </div>
+                <i data-lucide="external-link" style="width: 0.8rem; height: 0.8rem; opacity: 0.6;"></i>
+              </a>
+
+              <a href="https://discord.gg/HZpTfpk5ZA" target="_blank" class="support-channel">
+                <div class="support-channel-left">
+                  <i data-lucide="message-square" style="color: #5865F2; width: 1rem; height: 1rem;"></i>
+                  <span>Discord</span>
+                </div>
+                <i data-lucide="external-link" style="width: 0.8rem; height: 0.8rem; opacity: 0.6;"></i>
+              </a>
+
+              <a href="https://www.instagram.com/voltrixstore.ff/" target="_blank" class="support-channel">
+                <div class="support-channel-left">
+                  <i data-lucide="instagram" style="color: #C13584; width: 1rem; height: 1rem;"></i>
+                  <span>Instagram</span>
+                </div>
+                <i data-lucide="external-link" style="width: 0.8rem; height: 0.8rem; opacity: 0.6;"></i>
+              </a>
+
+              <a href="https://www.tiktok.com/@VXvendaoficial" target="_blank" class="support-channel">
+                <div class="support-channel-left">
+                  <i data-lucide="music-4" style="color: #ff0050; width: 1rem; height: 1rem;"></i>
+                  <span>TikTok</span>
+                </div>
+                <i data-lucide="external-link" style="width: 0.8rem; height: 0.8rem; opacity: 0.6;"></i>
+              </a>
+
+              <a href="mailto:VXvendasoficial1@gmail.com" class="support-channel">
+                <div class="support-channel-left">
+                  <i data-lucide="mail" style="color: #ef4444; width: 1rem; height: 1rem;"></i>
+                  <span>E-mail</span>
+                </div>
+                <i data-lucide="external-link" style="width: 0.8rem; height: 0.8rem; opacity: 0.6;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Access button -->
+        <button class="btn btn-secondary" id="btn-entrar" onclick="openLoginModal()">
+          <i data-lucide="user" style="width: 1.1rem; height: 1.1rem;"></i>
+          <span style="display: inline;" class="hide-mobile">Entrar</span>
+        </button>
+        <style>
+          @media (max-width: 640px) {
+            .hide-mobile { display: none !important; }
+          }
+        </style>
+
+        <!-- Cart Button -->
+        <button class="btn btn-primary open-cart-btn" style="position: relative;" id="header-cart-button">
+          <i data-lucide="shopping-cart" style="width: 1.1rem; height: 1.1rem;"></i>
+          <span class="hide-mobile">Carrinho</span>
+          <span class="cart-badge cart-btn-badge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Search Bar -->
+  <div class="container" style="padding-top: 1rem; padding-bottom: 0.5rem;" id="search-container-mobile">
+    <div class="search-container" style="max-width: 100%;">
+      <i data-lucide="search" class="search-icon"></i>
+      <input type="text" id="search-bar-mobile" class="search-input" placeholder="Buscar produto digital..." autocomplete="off">
+      <div class="search-results" id="search-results-mobile" style="top: 2.75rem;"></div>
+    </div>
+  </div>
+  <script>
+    if (window.innerWidth > 768) {
+      document.getElementById('search-container-mobile').style.display = 'none';
+    }
+  </script>
+
+  <!-- Main Section -->
+  <main class="container" style="flex: 1;">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <!-- Rating badge -->
+        <a href="https://discord.gg/HZpTfpk5ZA" target="_blank" class="rating-badge">
+          <span class="rating-stars">
+            <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+            <i data-lucide="star" style="fill: currentColor; width: 0.85rem; height: 0.85rem;"></i>
+          </span>
+          <span style="font-weight: 700;">4.9</span>
+          <span style="opacity: 0.4;">|</span>
+          <span>+50 Mil avaliaÃ§Ãµes no Discord</span>
+          <i data-lucide="chevron-right" style="width: 0.85rem; height: 0.85rem;"></i>
+        </a>
+
+        <!-- Hero text -->
+        <h1 class="hero-title">Bem-vindo(a) Ã  <span class="gradient-text-purple">VOLTRIX STORE</span>!</h1>
+        <p class="hero-description">Tudo em um sÃ³ lugar: codiguin de skins, contas premium, sensi VIP de Free Fire e painÃ©is de alto nÃ­vel. Compra rÃ¡pida, segura e com entrega 100% automÃ¡tica imediata.</p>
+
+        <!-- CTA buttons -->
+        <div class="hero-cta">
+          <a href="https://discord.gg/HZpTfpk5ZA" target="_blank" class="btn btn-primary" style="height: 2.75rem;">
+            <i data-lucide="message-square" style="width: 1.15rem; height: 1.15rem;"></i>
+            Comunidade Discord
+          </a>
+          <a href="#store" class="btn btn-secondary" style="height: 2.75rem;">
+            <i data-lucide="shopping-bag" style="width: 1.15rem; height: 1.15rem;"></i>
+            Explorar Produtos
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual: Vertical Scrolling Carousels (Desktop) -->
+      <div class="hero-visual">
+        <div class="vertical-carousel-grid">
+          <!-- Col 1 (Up) -->
+          <div class="vertical-carousel-col col-up-1">
+            <div class="vertical-carousel-track">
+              <!-- Item 1 -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card green">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="10" y="20" width="80" height="50" rx="8" fill="currentColor" fill-opacity="0.1"/><path d="M40 70 l-10 15 h40 l-10 -15"/><polygon points="45,37 60,45 45,53" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card purple">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-purple-400 fill-none stroke-current" stroke-width="2"><path d="M30 80 L50 20 L70 80 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="45" r="8"/><path d="M15 50 H85 M50 15 V85" opacity="0.4" stroke-dasharray="2,2"/></svg>
+                </div>
+              </div>
+              <!-- Item 3 -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card orange">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-orange-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 L35 55 M25 75 L30 80 M30 65 L45 50" stroke-width="3"/><path d="M35 55 L85 20 L80 15 L30 50 Z" fill="currentColor" fill-opacity="0.2"/><path d="M70 30 L80 40 M65 25 L75 35" stroke-width="1.5"/></svg>
+                </div>
+              </div>
+              <!-- Item 4 -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card red">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-rose-500 fill-current"><path d="M35 15 L15 35 L45 85 L55 85 Z M65 15 L85 35 L70 58 Z"/></svg>
+                </div>
+              </div>
+              <!-- Item 5 -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card red">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-red-600 fill-current"><path d="M32 15 h10 v70 h-10 Z M58 15 h10 v70 h-10 Z"/><path d="M32 15 L68 85 H58 L32 15 Z" fill="#b91c1c"/></svg>
+                </div>
+              </div>
+              
+              <!-- Duplicate for loop -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card green">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="10" y="20" width="80" height="50" rx="8" fill="currentColor" fill-opacity="0.1"/><path d="M40 70 l-10 15 h40 l-10 -15"/><polygon points="45,37 60,45 45,53" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card purple">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-purple-400 fill-none stroke-current" stroke-width="2"><path d="M30 80 L50 20 L70 80 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="45" r="8"/><path d="M15 50 H85 M50 15 V85" opacity="0.4" stroke-dasharray="2,2"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card orange">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-orange-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 L35 55 M25 75 L30 80 M30 65 L45 50" stroke-width="3"/><path d="M35 55 L85 20 L80 15 L30 50 Z" fill="currentColor" fill-opacity="0.2"/><path d="M70 30 L80 40 M65 25 L75 35" stroke-width="1.5"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card red">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-rose-500 fill-current"><path d="M35 15 L15 35 L45 85 L55 85 Z M65 15 L85 35 L70 58 Z"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card red">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-red-600 fill-current"><path d="M32 15 h10 v70 h-10 Z M58 15 h10 v70 h-10 Z"/><path d="M32 15 L68 85 H58 L32 15 Z" fill="#b91c1c"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2 (Down) -->
+          <div class="vertical-carousel-col col-down-2">
+            <div class="vertical-carousel-track">
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-sky-500 fill-none stroke-current" stroke-width="2"><circle cx="35" cy="40" r="15" fill="currentColor" fill-opacity="0.1"/><circle cx="35" cy="40" r="5" fill="currentColor"/><path d="M45 48 L75 78 M65 68 L75 58 M70 73 L80 63" stroke-width="3"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card green">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="15" y="15" width="70" height="70" rx="10" fill="currentColor" fill-opacity="0.1"/><rect x="25" y="25" width="10" height="10" fill="currentColor"/><rect x="45" y="35" width="10" height="10" fill="currentColor"/><rect x="65" y="55" width="10" height="10" fill="currentColor"/><path d="M20 70 h60" stroke-dasharray="3,3"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card amber">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-orange-600 fill-none stroke-current" stroke-width="2"><path d="M50 15 L55 35 L75 35 L60 48 L65 70 L50 55 L35 70 L40 48 L25 35 L45 35 Z" fill="currentColor" fill-opacity="0.15"/><circle cx="50" cy="45" r="25"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-sky-400 fill-none stroke-current" stroke-width="2"><path d="M20 75 C 20 30, 80 30, 80 75" stroke-dasharray="3,3"/><path d="M30 75 C 30 40, 70 40, 70 75" stroke-width="3"/><path d="M50 15 L52 23 L60 25 L52 27 L50 35 L48 27 L40 25 L48 23 Z" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-blue-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M35 20 h30 L75 80 H60 L50 45 L40 80 H25 Z" fill="currentColor" fill-opacity="0.15"/><path d="M30 35 Q 20 40, 32 45 M70 35 Q 80 40, 68 45" stroke-width="2.5" stroke-color="#60a5fa"/></svg>
+                </div>
+              </div>
+
+              <!-- Duplicate for loop -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-sky-500 fill-none stroke-current" stroke-width="2"><circle cx="35" cy="40" r="15" fill="currentColor" fill-opacity="0.1"/><circle cx="35" cy="40" r="5" fill="currentColor"/><path d="M45 48 L75 78 M65 68 L75 58 M70 73 L80 63" stroke-width="3"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card green">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="15" y="15" width="70" height="70" rx="10" fill="currentColor" fill-opacity="0.1"/><rect x="25" y="25" width="10" height="10" fill="currentColor"/><rect x="45" y="35" width="10" height="10" fill="currentColor"/><rect x="65" y="55" width="10" height="10" fill="currentColor"/><path d="M20 70 h60" stroke-dasharray="3,3"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card amber">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-orange-600 fill-none stroke-current" stroke-width="2"><path d="M50 15 L55 35 L75 35 L60 48 L65 70 L50 55 L35 70 L40 48 L25 35 L45 35 Z" fill="currentColor" fill-opacity="0.15"/><circle cx="50" cy="45" r="25"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-sky-400 fill-none stroke-current" stroke-width="2"><path d="M20 75 C 20 30, 80 30, 80 75" stroke-dasharray="3,3"/><path d="M30 75 C 30 40, 70 40, 70 75" stroke-width="3"/><path d="M50 15 L52 23 L60 25 L52 27 L50 35 L48 27 L40 25 L48 23 Z" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-blue-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M35 20 h30 L75 80 H60 L50 45 L40 80 H25 Z" fill="currentColor" fill-opacity="0.15"/><path d="M30 35 Q 20 40, 32 45 M70 35 Q 80 40, 68 45" stroke-width="2.5" stroke-color="#60a5fa"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3 (Up) -->
+          <div class="vertical-carousel-col col-up-3">
+            <div class="vertical-carousel-track">
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card purple">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-purple-500 fill-none stroke-current" stroke-width="2"><path d="M50 15 L85 45 L70 85 H30 L15 45 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="50" r="15" stroke-width="3"/><path d="M50 25 C 60 40, 60 60, 50 75" opacity="0.6"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card green">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-green-500 fill-none stroke-current" stroke-width="2"><rect x="15" y="15" width="70" height="70" rx="6" fill="currentColor" fill-opacity="0.05"/><circle cx="50" cy="50" r="20"/><circle cx="50" cy="50" r="6" fill="currentColor"/><line x1="15" y1="50" x2="85" y2="50"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card amber">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-amber-500 fill-none stroke-current" stroke-width="2"><polygon points="15,80 45,30 60,55 75,35 90,80" fill="currentColor" fill-opacity="0.1"/><line x1="10" y1="80" x2="90" y2="80" stroke-width="3"/><circle cx="50" cy="20" r="8" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card red">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-rose-600 fill-none stroke-current" stroke-width="2"><circle cx="50" cy="40" r="20" fill="currentColor" fill-opacity="0.1"/><line x1="50" y1="10" x2="50" y2="30"/><line x1="50" y1="50" x2="50" y2="90" stroke-width="3"/><circle cx="50" cy="40" r="4" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-sky-400 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="35" r="15" fill="currentColor" fill-opacity="0.1"/><path d="M25 80 C 25 55, 75 55, 75 80 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="35" r="5" fill="currentColor"/></svg>
+                </div>
+              </div>
+
+              <!-- Duplicate for loop -->
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card purple">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-purple-500 fill-none stroke-current" stroke-width="2"><path d="M50 15 L85 45 L70 85 H30 L15 45 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="50" r="15" stroke-width="3"/><path d="M50 25 C 60 40, 60 60, 50 75" opacity="0.6"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card green">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-green-500 fill-none stroke-current" stroke-width="2"><rect x="15" y="15" width="70" height="70" rx="6" fill="currentColor" fill-opacity="0.05"/><circle cx="50" cy="50" r="20"/><circle cx="50" cy="50" r="6" fill="currentColor"/><line x1="15" y1="50" x2="85" y2="50"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card amber">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-amber-500 fill-none stroke-current" stroke-width="2"><polygon points="15,80 45,30 60,55 75,35 90,80" fill="currentColor" fill-opacity="0.1"/><line x1="10" y1="80" x2="90" y2="80" stroke-width="3"/><circle cx="50" cy="20" r="8" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card red">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-rose-600 fill-none stroke-current" stroke-width="2"><circle cx="50" cy="40" r="20" fill="currentColor" fill-opacity="0.1"/><line x1="50" y1="10" x2="50" y2="30"/><line x1="50" y1="50" x2="50" y2="90" stroke-width="3"/><circle cx="50" cy="40" r="4" fill="currentColor"/></svg>
+                </div>
+              </div>
+              <div class="vertical-carousel-item" >
+                <div class="graphic-card blue">
+                  <svg viewBox="0 0 100 100" class="w-full h-full p-4 text-sky-400 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="35" r="15" fill="currentColor" fill-opacity="0.1"/><path d="M25 80 C 25 55, 75 55, 75 80 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="35" r="5" fill="currentColor"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Carousels (Horizontal scrolling) -->
+      <div class="mobile-carousel-container">
+        <!-- Row 1 (Left) -->
+        <div class="horizontal-carousel-row row-left">
+          <div class="horizontal-carousel-track">
+            <div class="horizontal-carousel-item" ><div class="graphic-card green" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="10" y="20" width="80" height="50" rx="8" fill="currentColor" fill-opacity="0.1"/><path d="M40 70 l-10 15 h40 l-10 -15"/><polygon points="45,37 60,45 45,53" fill="currentColor"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card purple" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-purple-400 fill-none stroke-current" stroke-width="2"><path d="M30 80 L50 20 L70 80 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="45" r="8"/><path d="M15 50 H85 M50 15 V85" opacity="0.4" stroke-dasharray="2,2"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card orange" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-orange-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 L35 55 M25 75 L30 80 M30 65 L45 50" stroke-width="3"/><path d="M35 55 L85 20 L80 15 L30 50 Z" fill="currentColor" fill-opacity="0.2"/><path d="M70 30 L80 40 M65 25 L75 35" stroke-width="1.5"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card red" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-rose-500 fill-current"><path d="M35 15 L15 35 L45 85 L55 85 Z M65 15 L85 35 L70 58 Z"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card red" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-red-600 fill-current"><path d="M32 15 h10 v70 h-10 Z M58 15 h10 v70 h-10 Z"/><path d="M32 15 L68 85 H58 L32 15 Z" fill="#b91c1c"/></svg></div></div>
+            
+            <!-- Duplicate for loop -->
+            <div class="horizontal-carousel-item" ><div class="graphic-card green" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="10" y="20" width="80" height="50" rx="8" fill="currentColor" fill-opacity="0.1"/><path d="M40 70 l-10 15 h40 l-10 -15"/><polygon points="45,37 60,45 45,53" fill="currentColor"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card purple" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-purple-400 fill-none stroke-current" stroke-width="2"><path d="M30 80 L50 20 L70 80 Z" fill="currentColor" fill-opacity="0.1"/><circle cx="50" cy="45" r="8"/><path d="M15 50 H85 M50 15 V85" opacity="0.4" stroke-dasharray="2,2"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card orange" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-orange-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 70 L35 55 M25 75 L30 80 M30 65 L45 50" stroke-width="3"/><path d="M35 55 L85 20 L80 15 L30 50 Z" fill="currentColor" fill-opacity="0.2"/><path d="M70 30 L80 40 M65 25 L75 35" stroke-width="1.5"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card red" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-rose-500 fill-current"><path d="M35 15 L15 35 L45 85 L55 85 Z M65 15 L85 35 L70 58 Z"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card red" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-red-600 fill-current"><path d="M32 15 h10 v70 h-10 Z M58 15 h10 v70 h-10 Z"/><path d="M32 15 L68 85 H58 L32 15 Z" fill="#b91c1c"/></svg></div></div>
+          </div>
+        </div>
+
+        <!-- Row 2 (Right) -->
+        <div class="horizontal-carousel-row row-right">
+          <div class="horizontal-carousel-track">
+            <div class="horizontal-carousel-item" ><div class="graphic-card blue" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-sky-500 fill-none stroke-current" stroke-width="2"><circle cx="35" cy="40" r="15" fill="currentColor" fill-opacity="0.1"/><circle cx="35" cy="40" r="5" fill="currentColor"/><path d="M45 48 L75 78 M65 68 L75 58 M70 73 L80 63" stroke-width="3"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card green" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="15" y="15" width="70" height="70" rx="10" fill="currentColor" fill-opacity="0.1"/><rect x="25" y="25" width="10" height="10" fill="currentColor"/><rect x="45" y="35" width="10" height="10" fill="currentColor"/><rect x="65" y="55" width="10" height="10" fill="currentColor"/><path d="M20 70 h60" stroke-dasharray="3,3"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card amber" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-orange-600 fill-none stroke-current" stroke-width="2"><path d="M50 15 L55 35 L75 35 L60 48 L65 70 L50 55 L35 70 L40 48 L25 35 L45 35 Z" fill="currentColor" fill-opacity="0.15"/><circle cx="50" cy="45" r="25"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card blue" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-sky-400 fill-none stroke-current" stroke-width="2"><path d="M20 75 C 20 30, 80 30, 80 75" stroke-dasharray="3,3"/><path d="M30 75 C 30 40, 70 40, 70 75" stroke-width="3"/><path d="M50 15 L52 23 L60 25 L52 27 L50 35 L48 27 L40 25 L48 23 Z" fill="currentColor"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card blue" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-blue-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M35 20 h30 L75 80 H60 L50 45 L40 80 H25 Z" fill="currentColor" fill-opacity="0.15"/><path d="M30 35 Q 20 40, 32 45 M70 35 Q 80 40, 68 45" stroke-width="2.5" stroke-color="#60a5fa"/></svg></div></div>
+
+            <!-- Duplicate for loop -->
+            <div class="horizontal-carousel-item" ><div class="graphic-card blue" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-sky-500 fill-none stroke-current" stroke-width="2"><circle cx="35" cy="40" r="15" fill="currentColor" fill-opacity="0.1"/><circle cx="35" cy="40" r="5" fill="currentColor"/><path d="M45 48 L75 78 M65 68 L75 58 M70 73 L80 63" stroke-width="3"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card green" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-emerald-500 fill-none stroke-current" stroke-width="2"><rect x="15" y="15" width="70" height="70" rx="10" fill="currentColor" fill-opacity="0.1"/><rect x="25" y="25" width="10" height="10" fill="currentColor"/><rect x="45" y="35" width="10" height="10" fill="currentColor"/><rect x="65" y="55" width="10" height="10" fill="currentColor"/><path d="M20 70 h60" stroke-dasharray="3,3"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card amber" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-orange-600 fill-none stroke-current" stroke-width="2"><path d="M50 15 L55 35 L75 35 L60 48 L65 70 L50 55 L35 70 L40 48 L25 35 L45 35 Z" fill="currentColor" fill-opacity="0.15"/><circle cx="50" cy="45" r="25"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card blue" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-sky-400 fill-none stroke-current" stroke-width="2"><path d="M20 75 C 20 30, 80 30, 80 75" stroke-dasharray="3,3"/><path d="M30 75 C 30 40, 70 40, 70 75" stroke-width="3"/><path d="M50 15 L52 23 L60 25 L52 27 L50 35 L48 27 L40 25 L48 23 Z" fill="currentColor"/></svg></div></div>
+            <div class="horizontal-carousel-item" ><div class="graphic-card blue" style="height:100%;"><svg viewBox="0 0 100 100" class="w-full h-full p-3 text-blue-500 fill-none stroke-current" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M35 20 h30 L75 80 H60 L50 45 L40 80 H25 Z" fill="currentColor" fill-opacity="0.15"/><path d="M30 35 Q 20 40, 32 45 M70 35 Q 80 40, 68 45" stroke-width="2.5" stroke-color="#60a5fa"/></svg></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- References Section -->
+    <section style="margin-bottom: 2rem;">
+      <div class="section-title-wrapper">
+        <div class="section-line"></div>
+        <h2 class="section-title">
+          <i data-lucide="shield-check" style="color: #02e2ff; width: 1.35rem; height: 1.35rem;"></i>
+          ReferÃªncias VOLTRIX STORE
+        </h2>
+        <div class="section-line line-reversed"></div>
+      </div>
+
+      <!-- Empty State for Feedbacks (Shown if 0 feedbacks) -->
+      <div class="empty-feedbacks-container" id="empty-feedbacks" style="display: none;">
+        <i data-lucide="message-square" class="empty-feedbacks-icon"></i>
+        <h3 class="empty-feedbacks-title">Nenhum feedback ainda</h3>
+        <p class="empty-feedbacks-desc">Nenhum feedback foi enviado ainda neste navegador. Seja o primeiro a dar sua avaliaÃ§Ã£o!</p>
+        <button class="btn btn-primary" onclick="openFeedbackModal()" style="margin-top: 0.5rem; gap: 0.5rem;">
+          <i data-lucide="message-square-plus" style="width: 1.1rem; height: 1.1rem;"></i>
+          Deixar Feedback
+        </button>
+      </div>
+
+      <!-- Feedbacks Infinite Marquee (Populated by JS) -->
+      <div class="feedbacks-marquee-container" id="feedbacks-marquee-container">
+        <div class="feedbacks-track" id="feedbacks-track">
+          <!-- Cards dynamic loop -->
+        </div>
+
+        <!-- Button to write review below marquee -->
+        <div style="display: flex; justify-content: center; margin-top: 1.75rem;">
+          <button class="btn btn-secondary" onclick="openFeedbackModal()" style="gap: 0.5rem; border-color: rgba(2, 226, 255, 0.3); background-color: rgba(2, 226, 255, 0.05);">
+            <i data-lucide="message-square-plus" style="width: 1.1rem; height: 1.1rem; color: #02e2ff;"></i>
+            Deixar Depoimento
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Categories Navigation Grid -->
+    <section>
+      <div class="section-title-wrapper" style="margin-top: 2rem;">
+        <div class="section-line"></div>
+        <h2 class="section-title">
+          <i data-lucide="grid-3x3" style="color: #02e2ff; width: 1.35rem; height: 1.35rem;"></i>
+          Categorias
+        </h2>
+        <div class="section-line line-reversed"></div>
+      </div>
+
+      <div class="categories-grid">\n        <a href="#cat-block-contas" class="category-card" data-category="contas">\n          <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(249, 115, 22, 0.2), transparent); opacity:0.6; z-index:1;"></div>\n          <span class="category-card-status"></span>\n          <span class="category-card-title">Contas</span>\n        </a>\n        <a href="#cat-block-outros" class="category-card" data-category="outros">\n          <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent); opacity:0.4; z-index:1;"></div>\n          <span class="category-card-status"></span>\n          <span class="category-card-title">Outros</span>\n        </a>\n      </div>\n    </section>
+
+    <!-- Products Store Section -->
+    <section id="store">
+      <!-- Grid container, populated by app.js -->
+      <div id="categories-container">
+        <!-- Rendered lists will appear here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <a href="/" class="logo-container">
+          <svg viewBox="0 0 100 100" class="logo-img" style="background-color: #0b0a14; padding: 6px; border: 1px solid rgba(2, 226, 255, 0.3); box-shadow: 0 0 15px rgba(2, 226, 255, 0.4); border-radius: 8px; width: 2.5rem; height: 2.5rem;">
+            <defs>
+              <linearGradient id="logo-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#02e2ff" />
+                <stop offset="100%" stop-color="#3b82f6" />
+              </linearGradient>
+            </defs>
+            <polygon points="50,15 80,30 80,65 50,85 20,65 20,30" fill="url(#logo-grad-footer)" fill-opacity="0.1" stroke="url(#logo-grad-footer)" stroke-width="4"/>
+            <path d="M38 35 H48 C55 35, 55 48, 48 48 H38 Z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M52 35 L68 65 M68 35 L52 65" fill="none" stroke="#02e2ff" stroke-width="4.5" stroke-linecap="round"/>
+          </svg>
+          <h2 style="font-size: 1.15rem; margin: 0;">VOLTRIX STORE</h2>
+        </a>
+        <p class="footer-desc">A melhor loja de produtos digitais com entrega imediata e suporte eficiente.</p>
+        <p class="footer-credit">
+          <i data-lucide="moon" style="width: 0.95rem; height: 0.95rem; color: #02e2ff; fill: #02e2ff;"></i>
+          Visual Desenvolvido por <a href="https://www.instagram.com/_marcos.ar1el?igsh=MXR3OTZqdWFpcWE3cg==" target="_blank" rel="noopener noreferrer">Marcos Ariel</a>
+        </p>
+      </div>
+
+      <!-- Links column -->
+      <div>
+        <h3 class="footer-links-title">InformaÃ§Ãµes</h3>
+        <ul class="footer-links-list">
+          <li>
+            <a href="#" onclick="showToast('Termos de ServiÃ§o em breve!')" class="footer-link">
+              <i data-lucide="file-text" style="width: 0.95rem; height: 0.95rem;"></i>
+              Termos de ServiÃ§o
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="showToast('PolÃ­tica de Privacidade em breve!')" class="footer-link">
+              <i data-lucide="shield-check" style="width: 0.95rem; height: 0.95rem;"></i>
+              PolÃ­tica de Privacidade
+            </a>
+          </li>
+        </ul>
+        
+        <h4 style="font-size: 0.8rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; text-transform: uppercase;">Selos de ConfianÃ§a</h4>
+        <div class="trust-badges">
+          <img src="https://www.siteconfiavel.com.br/assets/img/logo.svg" alt="Site ConfiÃ¡vel" class="trust-badge-img">
+          <img src="https://images-static.trustpilot.com/support/help-center/assets/icons/tp-star--green.svg" alt="Trustpilot" class="trust-badge-img">
+        </div>
+      </div>
+
+      <!-- Social column -->
+      <div>
+        <h3 class="footer-links-title">Comunidade</h3>
+        <div class="social-links" style="margin-bottom: 1.5rem;">
+          <a href="https://www.instagram.com/VXvendasoficial/" target="_blank" class="social-btn" aria-label="Instagram">
+            <i data-lucide="instagram" style="width: 1.15rem; height: 1.15rem;"></i>
+          </a>
+          <a href="https://discord.gg/HZpTfpk5ZA" target="_blank" class="social-btn" aria-label="Discord">
+            <i data-lucide="message-square" style="width: 1.15rem; height: 1.15rem;"></i>
+          </a>
+          <a href="https://www.tiktok.com/@VXvendaoficial" target="_blank" class="social-btn" aria-label="TikTok">
+            <i data-lucide="music" style="width: 1.15rem; height: 1.15rem;"></i>
+          </a>
+          <a href="https://wa.me/554398237466" target="_blank" class="social-btn" aria-label="WhatsApp">
+            <i data-lucide="phone" style="width: 1.15rem; height: 1.15rem;"></i>
+          </a>
+        </div>
+        <p style="font-size: 0.85rem; color: hsl(var(--muted-foreground));">Siga nossas redes sociais oficiais para cupons diÃ¡rios, novidades e sorteios exclusivos.</p>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="container footer-bottom">
+      <p>Copyright Â© 2026 - VOLTRIX STORE. Todos os direitos reservados.</p>
+      <div class="footer-features">
+        <div class="footer-feature-item">
+          <i data-lucide="shield-check" style="width: 1rem; height: 1rem;"></i>
+          <span>100% Seguro</span>
+        </div>
+        <div class="footer-feature-item">
+          <i data-lucide="zap" style="width: 1rem; height: 1rem;"></i>
+          <span>Entrega InstantÃ¢nea</span>
+        </div>
+        <div class="footer-feature-item">
+          <i data-lucide="headphones" style="width: 1rem; height: 1rem;"></i>
+          <span>Suporte Premium</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="drawer" id="cart-drawer">
+    <div class="drawer-header">
+      <h4 class="drawer-title">Meu Carrinho</h4>
+      <button class="drawer-close" id="drawer-close" aria-label="Fechar Carrinho">
+        <i data-lucide="x" style="width: 1.35rem; height: 1.35rem;"></i>
+      </button>
+    </div>
+
+    <!-- Cart items will be rendered by JS here -->
+    <div class="drawer-content" id="cart-items-container">
+      <!-- Empty state by default -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="cart-pricing-box">
+        <span class="cart-pricing-label">Valor Total:</span>
+        <span class="cart-pricing-value" id="cart-total-value">R$ 0,00</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%; height: 2.75rem;" id="cart-checkout-btn" onclick="openCheckout()" disabled>
+        Finalizar Compra
+      </button>
+    </div>
+  </div>
+
+  <!-- FLOATING ROLETA PILL -->
+  <div class="roleta-float-badge" id="roleta-float" title="Roleta Premiada">
+    <span class="roleta-spin-icon">
+      <i data-lucide="rotate-cw" style="width: 1.15rem; height: 1.15rem; color: white;"></i>
+    </span>
+    <span class="hero-desc-shiny" style="font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">Roleta</span>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://api.whatsapp.com/send/?phone=554398237466&text=Realizei%20uma%20compra%20pelo%20site%20e%20gostaria%20de%20verificar!" target="_blank" class="whatsapp-float" aria-label="Suporte WhatsApp">
+    <svg class="whatsapp-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ROLETA PREMIADA MODAL -->
+  <div class="modal-overlay" id="roleta-modal">
+    <div class="modal-container">
+      <button class="modal-close" id="roleta-close" aria-label="Fechar Modal">
+        <i data-lucide="x" style="width: 1.35rem; height: 1.35rem;"></i>
+      </button>
+      <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #fff 30%, #02e2ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Roleta Premiada VX</h2>
+      <p style="font-size: 0.85rem; color: #a3a3a3; max-width: 320px;">Gire a roleta e ganhe cupons exclusivos para utilizar na sua prÃ³xima compra digital!</p>
+      
+      <!-- Roleta Wheel Container -->
+      <div class="roleta-container">
+        <div class="roleta-pin"></div>
+        <div class="roleta-wheel-outer">
+          <div class="roleta-wheel" id="roleta-wheel">
+            <div class="roleta-slice-text slice-1">VX10 (10%)</div>
+            <div class="roleta-slice-text slice-2">VX20 (20%)</div>
+            <div class="roleta-slice-text slice-3">Tente Dnv</div>
+            <div class="roleta-slice-text slice-4">SENSI50 (50%)</div>
+            <div class="roleta-slice-text slice-5">Frete GrÃ¡tis</div>
+            <div class="roleta-slice-text slice-6">VX5 (5%)</div>
+            <div class="roleta-slice-text slice-7">Sem PrÃªmio</div>
+            <div class="roleta-slice-text slice-8">VX15 (15%)</div>
+          </div>
+        </div>
+        <div class="roleta-center">
+          <i data-lucide="dices" style="width: 1.35rem; height: 1.35rem; color: #02e2ff;"></i>
+        </div>
+      </div>
+
+      <div class="roleta-result" id="roleta-result">Ganhe atÃ© 50% de desconto!</div>
+      
+      <!-- Coupon Copy overlay -->
+      <div class="roleta-coupon-display" id="roleta-coupon-display">
+        <span id="roleta-coupon-code">VX20</span>
+        <button class="roleta-coupon-copy" onclick="copyCoupon()">Copiar Cupom</button>
+      </div>
+
+      <button class="btn btn-primary roleta-btn" onclick="spinRoleta()">Girar Roleta ðŸŽ²</button>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL FLOW -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-container checkout-modal">
+      <button class="modal-close" id="checkout-close" aria-label="Fechar Checkout">
+        <i data-lucide="x" style="width: 1.35rem; height: 1.35rem;"></i>
+      </button>
+      
+      <div class="checkout-header">
+        <i data-lucide="shopping-bag" style="color: #02e2ff; width: 1.25rem; height: 1.25rem; vertical-align: middle;"></i>
+        <span style="vertical-align: middle; margin-left: 0.25rem;">FinalizaÃ§Ã£o de Compra</span>
+      </div>
+
+      <!-- Step 1: User details -->
+      <div class="checkout-step active" id="checkout-step-1">
+        <h4 style="font-weight: 700; font-size: 0.95rem; color: #fff; margin-bottom: 1rem;">1. InformaÃ§Ãµes de Contato</h4>
+        
+        <div class="form-group">
+          <label class="form-label" for="chk-name">Nome Completo</label>
+          <input type="text" id="chk-name" class="form-input" placeholder="Seu nome completo">
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="chk-email">E-mail para Entrega</label>
+          <input type="email" id="chk-email" class="form-input" placeholder="exemplo@email.com">
+          <p style="font-size: 0.75rem; color: #a3a3a3; margin-top: 0.15rem;">Certifique-se de digitar corretamente. O produto digital serÃ¡ enviado para este e-mail.</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="chk-whatsapp">WhatsApp (com DDD)</label>
+          <input type="tel" id="chk-whatsapp" class="form-input" placeholder="(11) 99999-9999">
+        </div>
+
+        <button class="btn btn-primary" style="width: 100%; margin-top: 1rem; height: 2.75rem;" onclick="submitStep1()">
+          Continuar para Pagamento
+          <i data-lucide="arrow-right" style="width: 1.1rem; height: 1.1rem;"></i>
+        </button>
+      </div>
+
+      <!-- Step 2: Checkout details (Coupon and total) -->
+      <div class="checkout-step" id="checkout-step-2">
+        <h4 style="font-weight: 700; font-size: 0.95rem; color: #fff; margin-bottom: 1rem;">2. Resumo e Cupom</h4>
+        
+        <!-- Coupon Form -->
+        <div class="coupon-input-container">
+          <input type="text" id="chk-coupon-input" class="form-input coupon-input" placeholder="CÃ³digo do Cupom">
+          <button class="btn btn-secondary coupon-apply-btn" onclick="handleCheckoutCouponBtn()">Aplicar</button>
+        </div>
+        <p class="coupon-feedback" id="coupon-feedback"></p>
+
+        <!-- Summary -->
+        <div style="background-color: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; margin-top: 0.5rem;">
+          <div class="checkout-summary-row">
+            <span>Quantidade total:</span>
+            <span id="checkout-sum-qty">1 item</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Subtotal:</span>
+            <span id="checkout-sum-subtotal">R$ 0,00</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Desconto do Cupom:</span>
+            <span id="checkout-sum-discount" style="color: #ef4444;">R$ 0,00</span>
+          </div>
+          <div class="checkout-total-row">
+            <span>Valor Final (Pix):</span>
+            <span id="checkout-sum-total" style="color: #02e2ff;">R$ 0,00</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" style="width: 100%; height: 2.75rem;" onclick="goToStep(3)">
+          Gerar Pix para Pagamento âš¡
+        </button>
+      </div>
+
+      <!-- Step 3: QR Code and simulation -->
+      <div class="checkout-step" id="checkout-step-3">
+        <h4 style="font-weight: 700; font-size: 0.95rem; color: #a3a3a3; margin-bottom: 1rem; text-align: center;">Escaneie o QR Code ou copie o cÃ³digo Pix</h4>
+        
+        <div class="pix-details-box">
+          <svg class="pix-qr-code" viewBox="0 0 100 100">
+            <!-- Simulated QR Code SVG pattern -->
+            <rect width="100" height="100" fill="white"/>
+            <!-- Outer borders -->
+            <rect x="10" y="10" width="20" height="20" fill="black" stroke="white" stroke-width="2"/>
+            <rect x="14" y="14" width="12" height="12" fill="white"/>
+            <rect x="17" y="17" width="6" height="6" fill="black"/>
+
+            <rect x="70" y="10" width="20" height="20" fill="black" stroke="white" stroke-width="2"/>
+            <rect x="74" y="74" width="12" height="12" fill="white"/>
+            <rect x="74" y="14" width="12" height="12" fill="white"/>
+            <rect x="77" y="17" width="6" height="6" fill="black"/>
+
+            <rect x="10" y="70" width="20" height="20" fill="black" stroke="white" stroke-width="2"/>
+            <rect x="14" y="74" width="12" height="12" fill="white"/>
+            <rect x="17" y="77" width="6" height="6" fill="black"/>
+            
+            <!-- Matrix simulation -->
+            <rect x="35" y="15" width="5" height="10" fill="black"/>
+            <rect x="45" y="10" width="10" height="5" fill="black"/>
+            <rect x="40" y="25" width="15" height="5" fill="black"/>
+            <rect x="60" y="15" width="5" height="25" fill="black"/>
+            <rect x="35" y="45" width="20" height="5" fill="black"/>
+            <rect x="15" y="45" width="10" height="10" fill="black"/>
+            <rect x="45" y="55" width="5" height="15" fill="black"/>
+            <rect x="75" y="45" width="15" height="5" fill="black"/>
+            <rect x="70" y="55" width="5" height="10" fill="black"/>
+            <rect x="80" y="75" width="10" height="15" fill="black"/>
+            <rect x="35" y="75" width="25" height="5" fill="black"/>
+            <rect x="45" y="85" width="10" height="5" fill="black"/>
+          </svg>
+
+          <div class="pix-copiacola-container">
+            <div class="pix-key-text" id="pix-key-val">Gerando chave Pix...</div>
+            <button class="pix-copy-btn" onclick="copyPixKey()">Copiar</button>
+          </div>
+
+          <p class="pix-timer">Aguardando confirmaÃ§Ã£o do pagamento... Expira em: <span class="pix-timer-count" id="pix-timer-val">10:00</span></p>
+          <p style="font-size: 0.8rem; color: #a3a3a3; font-style: italic;">(AprovaÃ§Ã£o simulada em 9 segundos para demonstraÃ§Ã£o)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DYNAMIC FEEDBACK MODAL -->
+  <div class="modal-overlay" id="feedback-modal">
+    <div class="modal-container" style="max-width: 460px; text-align: left; align-items: stretch;">
+      <button class="modal-close" id="feedback-close" aria-label="Fechar Modal">
+        <i data-lucide="x" style="width: 1.35rem; height: 1.35rem;"></i>
+      </button>
+      <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #fff 30%, #02e2ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center;">Deixar sua AvaliaÃ§Ã£o</h2>
+      <p style="font-size: 0.85rem; color: #a3a3a3; text-align: center; margin-bottom: 1.25rem;">Sua opiniÃ£o nos ajuda a melhorar a cada dia e a manter a excelÃªncia no atendimento!</p>
+      
+      <form id="feedback-form" onsubmit="submitFeedback(event)">
+        <!-- Name input -->
+        <div class="form-group">
+          <label class="form-label" for="feed-name">Nome ou Apelido</label>
+          <input type="text" id="feed-name" class="form-input" placeholder="Ex: Marcos A., Gamer99" required maxlength="25">
+        </div>
+
+        <!-- Rating Stars (interactive selection) -->
+        <div class="form-group">
+          <label class="form-label" style="text-align: center; display: block; width: 100%;">Sua Nota (Estrelas)</label>
+          <div class="star-rating-select" id="feedback-stars-select">
+            <i data-lucide="star" data-value="1"></i>
+            <i data-lucide="star" data-value="2"></i>
+            <i data-lucide="star" data-value="3"></i>
+            <i data-lucide="star" data-value="4"></i>
+            <i data-lucide="star" data-value="5"></i>
+          </div>
+        </div>
+
+        <!-- Platform select -->
+        <div class="form-group">
+          <label class="form-label" for="feed-platform">Plataforma Origem</label>
+          <select id="feed-platform" class="form-input" style="background: rgba(255,255,255,0.03); color: #fff; cursor: pointer;">
+            <option value="Discord" style="background: #1e1b4b; color: #fff;">Discord</option>
+            <option value="Google" style="background: #1e1b4b; color: #fff;">Google</option>
+            <option value="WhatsApp" style="background: #1e1b4b; color: #fff;">WhatsApp</option>
+            <option value="Instagram" style="background: #1e1b4b; color: #fff;">Instagram</option>
+            <option value="TikTok" style="background: #1e1b4b; color: #fff;">TikTok</option>
+          </select>
+        </div>
+
+        <!-- Avatar selector -->
+        <div class="form-group">
+          <label class="form-label" style="text-align: center; display: block; width: 100%;">Escolha seu Avatar</label>
+          <div class="avatar-select-container" id="feedback-avatar-select">
+            <img class="avatar-option selected" data-type="preset" data-value="https://i.pinimg.com/736x/a6/b9/6d/a6b96d301a7a0914fe657ee9d441692b.jpg" src="https://i.pinimg.com/736x/a6/b9/6d/a6b96d301a7a0914fe657ee9d441692b.jpg" alt="Preset 1">
+            <img class="avatar-option" data-type="preset" data-value="https://i.pinimg.com/originals/a1/28/ee/a128eead6f3a2cb79cb156f70857de45.gif" src="https://i.pinimg.com/originals/a1/28/ee/a128eead6f3a2cb79cb156f70857de45.gif" alt="Preset 2">
+            <img class="avatar-option" data-type="preset" data-value="https://i.pinimg.com/736x/d3/9d/53/d39d534093527bf9fa1636695598393e.jpg" src="https://i.pinimg.com/736x/d3/9d/53/d39d534093527bf9fa1636695598393e.jpg" alt="Preset 3">
+            <img class="avatar-option" data-type="preset" data-value="https://i.pinimg.com/736x/0d/18/d8/0d18d89e5fa472bfa0ee3c9a416bdfc5.jpg" src="https://i.pinimg.com/736x/0d/18/d8/0d18d89e5fa472bfa0ee3c9a416bdfc5.jpg" alt="Preset 4">
+            <div class="avatar-option avatar-option-initials" data-type="initials" id="avatar-option-initials-preview">VX</div>
+          </div>
+        </div>
+
+        <!-- Comment input -->
+        <div class="form-group">
+          <label class="form-label" for="feed-comment">Seu Depoimento</label>
+          <textarea id="feed-comment" class="form-input" style="height: auto; min-height: 80px; padding: 0.5rem 1rem; resize: vertical;" placeholder="Escreva aqui seu depoimento sobre nossos produtos e serviÃ§os..." required maxlength="200"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; height: 2.75rem;">
+          Enviar AvaliaÃ§Ã£o
+          <i data-lucide="send" style="width: 1.1rem; height: 1.1rem;"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ==================== MODAL LOGIN ==================== -->
+  <div id="login-modal-overlay" class="login-modal-overlay" onclick="closeLoginModal(event)">
+    <div class="login-modal-card" id="login-modal-card">
+      <div class="login-modal-glow"></div>
+
+      <button class="login-modal-close" onclick="closeLoginModal(null, true)" aria-label="Fechar">
+        <i data-lucide="x" style="width:1.1rem;height:1.1rem;"></i>
+      </button>
+
+      <!-- Logo / Header -->
+      <div class="login-modal-header">
+        <div class="login-modal-logo">
+          <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="loginLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#02e2ff"/>
+                <stop offset="100%" stop-color="#3b82f6"/>
+              </linearGradient>
+            </defs>
+            <rect width="40" height="40" rx="10" fill="url(#loginLogoGrad)" fill-opacity="0.15"/>
+            <path d="M20 6 L34 14 L34 26 L20 34 L6 26 L6 14 Z" stroke="url(#loginLogoGrad)" stroke-width="2" fill="none"/>
+            <path d="M20 12 L28 17 L28 23 L20 28 L12 23 L12 17 Z" fill="url(#loginLogoGrad)" fill-opacity="0.3"/>
+          </svg>
+        </div>
+        <h2 class="login-modal-title">Bem-vindo Ã  <span class="login-title-gradient">Voltrix Store</span></h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="login-tabs">
+        <button class="login-tab active" id="login-tab-user" onclick="switchLoginTab('user')">Entrar</button>
+        <button class="login-tab" id="login-tab-admin" onclick="switchLoginTab('admin')">
+          <i data-lucide="shield" style="width:0.85rem;height:0.85rem;"></i> Admin
+        </button>
+      </div>
+
+      <!-- Pane: UsuÃ¡rio -->
+      <div id="login-pane-user">
+        <p class="login-modal-subtitle" style="margin-bottom:1.25rem;">FaÃ§a login para acessar sua conta e acompanhar pedidos.</p>
+        <div class="login-options">
+          <button class="login-option-btn login-btn-google" onclick="loginWith('google')">
+            <span class="login-btn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+              </svg>
+            </span>
+            <span class="login-btn-text">Continuar com Google</span>
+            <i data-lucide="arrow-right" class="login-btn-arrow" style="width:1rem;height:1rem;"></i>
+          </button>
+          <button class="login-option-btn login-btn-discord" onclick="loginWith('discord')">
+            <span class="login-btn-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z" fill="#5865F2"/>
+              </svg>
+            </span>
+            <span class="login-btn-text">Continuar com Discord</span>
+            <i data-lucide="arrow-right" class="login-btn-arrow" style="width:1rem;height:1rem;"></i>
+          </button>
+        </div>
+        <div class="login-divider"><span>ou</span></div>
+        <p class="login-guest-note">
+          <i data-lucide="shield-check" style="width:0.9rem;height:0.9rem;display:inline;vertical-align:-2px;margin-right:4px;color:#02e2ff;"></i>
+          Seus dados sÃ£o protegidos. NÃ£o enviamos spam.
+        </p>
+      </div>
+
+      <!-- Pane: Admin -->
+      <div id="login-pane-admin" style="display:none;">
+        <p class="login-modal-subtitle" style="margin-bottom:1.25rem;">
+          <i data-lucide="lock" style="width:0.85rem;height:0.85rem;display:inline;vertical-align:-2px;margin-right:4px;"></i>
+          Ãrea exclusiva do dono da loja.
+        </p>
+        <div class="admin-login-form">
+          <label class="form-label" for="admin-key-input">Chave secreta de admin</label>
+          <input
+            id="admin-key-input"
+            type="password"
+            class="form-input"
+            placeholder="Digite sua chave secreta..."
+            onkeydown="if(event.key==='Enter') submitAdminLogin()"
+            autocomplete="current-password"
+          >
+          <button class="btn btn-primary" style="width:100%;margin-top:1rem;height:2.75rem;" onclick="submitAdminLogin()">
+            <i data-lucide="shield-check" style="width:1.1rem;height:1.1rem;"></i>
+            Entrar como Admin
+          </button>
+        </div>
+        <p class="login-guest-note" style="margin-top:1rem;">
+          A chave fica no arquivo <code style="background:rgba(255,255,255,0.08);padding:0.1em 0.4em;border-radius:4px;">app.js</code> â€” campo <code style="background:rgba(255,255,255,0.08);padding:0.1em 0.4em;border-radius:4px;">secretKey</code>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <!-- ==================== /MODAL LOGIN ==================== -->
+
+  <!-- ==================== ADMIN PRODUCT MODAL ==================== -->
+  <div id="admin-product-modal" class="login-modal-overlay" onclick="if(event.target===this)closeAdminProductModal()">
+    <div class="login-modal-card" style="max-width:480px;">
+      <div class="login-modal-glow"></div>
+      <button class="login-modal-close" onclick="closeAdminProductModal()">
+        <i data-lucide="x" style="width:1.1rem;height:1.1rem;"></i>
+      </button>
+
+      <div class="login-modal-header" style="margin-bottom:1.25rem;">
+        <div class="login-modal-logo">
+          <i data-lucide="package" style="width:1.4rem;height:1.4rem;color:#02e2ff;"></i>
+        </div>
+        <h2 class="login-modal-title" id="ap-modal-title">Adicionar Produto</h2>
+      </div>
+
+      <form id="admin-product-form" onsubmit="saveAdminProduct(event)" style="display:flex;flex-direction:column;gap:0.85rem;position:relative;z-index:1;">
+        <div class="form-group">
+          <label class="form-label" for="ap-name">Nome do produto</label>
+          <input id="ap-name" type="text" class="form-input" placeholder="Ex: Codiguim Free Fire x50" required maxlength="60">
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;">
+          <div class="form-group">
+            <label class="form-label" for="ap-orig-price">PreÃ§o original (R$)</label>
+            <input id="ap-orig-price" type="number" class="form-input" placeholder="29.90" step="0.01" min="0.01" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ap-price">PreÃ§o de venda (R$)</label>
+            <input id="ap-price" type="number" class="form-input" placeholder="14.90" step="0.01" min="0.01" required>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;">
+          <div class="form-group">
+            <label class="form-label" for="ap-category">Categoria</label>\n            <select id="ap-category" class="form-input" style="background:rgba(255,255,255,0.03);color:#fff;cursor:pointer;" required>\n              <option value="contas">Contas</option>\n              <option value="outros">Outros</option>\n            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="ap-color">Cor do card</label>
+            <select id="ap-color" class="form-input" style="background:rgba(255,255,255,0.03);color:#fff;cursor:pointer;">
+              <option value="blue"   style="background:#0a0c14;">Azul (blue)</option>
+              <option value="purple" style="background:#0a0c14;">Roxo (purple)</option>
+              <option value="red"    style="background:#0a0c14;">Vermelho (red)</option>
+              <option value="green"  style="background:#0a0c14;">Verde (green)</option>
+              <option value="orange" style="background:#0a0c14;">Laranja (orange)</option>
+              <option value="amber"  style="background:#0a0c14;">Dourado (amber)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="ap-image">URL da imagem (opcional)</label>
+          <input id="ap-image" type="url" class="form-input" placeholder="https://...">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;height:2.75rem;margin-top:0.25rem;">
+          <i data-lucide="check" style="width:1.1rem;height:1.1rem;"></i>
+          Salvar produto
+        </button>
+      </form>
+    </div>
+  </div>
+  <!-- ==================== /ADMIN PRODUCT MODAL ==================== -->
+
+  <!-- Admin floating bar -->
+  <div id="admin-bar" style="display:none; position:fixed; top:0; left:0; right:0; z-index:9998; background:linear-gradient(90deg,rgba(2,226,255,0.12),rgba(59,130,246,0.12)); border-bottom:1px solid rgba(2,226,255,0.3); padding:0.4rem 1.5rem; backdrop-filter:blur(8px); align-items:center; justify-content:space-between; gap:1rem;">
+    <span style="font-size:0.78rem;color:#02e2ff;font-weight:700;display:flex;align-items:center;gap:0.4rem;">
+      <i data-lucide="shield-check" style="width:0.9rem;height:0.9rem;"></i> MODO ADMIN ATIVO
+    </span>
+    <div style="display:flex;align-items:center;gap:0.5rem;">
+      <button class="btn btn-secondary" style="height:1.8rem;font-size:0.78rem;padding:0 0.85rem;border-color:rgba(2,226,255,0.3);background:rgba(2,226,255,0.08);" onclick="openPixConfigModal()">
+        <i data-lucide="qr-code" style="width:0.85rem;height:0.85rem;color:#02e2ff;"></i> Pix
+      </button>
+      <button class="btn btn-primary" style="height:1.8rem;font-size:0.78rem;padding:0 0.85rem;" onclick="openAdminProductModal(null)">
+        <i data-lucide="plus" style="width:0.85rem;height:0.85rem;"></i> Novo Produto
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Configurar Chave Pix -->
+  <div id="pix-config-modal" class="login-modal-overlay" onclick="if(event.target===this)closePixConfigModal()">
+    <div class="login-modal-card" style="max-width:460px;">
+      <div class="login-modal-glow"></div>
+      <button class="login-modal-close" onclick="closePixConfigModal()" aria-label="Fechar">
+        <i data-lucide="x" style="width:1.1rem;height:1.1rem;"></i>
+      </button>
+
+      <div class="login-modal-header">
+        <div class="login-modal-logo" style="background:rgba(2,226,255,0.1);border-color:rgba(2,226,255,0.3);">
+          <i data-lucide="qr-code" style="width:1.5rem;height:1.5rem;color:#02e2ff;"></i>
+        </div>
+        <h2 class="login-modal-title">Configurar Chave Pix</h2>
+        <p class="login-modal-subtitle">Configure sua chave Pix para receber pagamentos diretamente na sua conta.</p>
+      </div>
+
+      <form id="pix-config-form" onsubmit="savePixConfig(event)" style="display:flex;flex-direction:column;gap:1rem;width:100%;">
+        <div class="form-group" style="margin-bottom:0;">
+          <label class="form-label" for="pix-tipo">Tipo da Chave</label>
+          <select id="pix-tipo" class="form-input" style="background:rgba(255,255,255,0.03);color:#fff;cursor:pointer;">
+            <option value="cpf" style="background:#1e1b4b;color:#fff;">CPF</option>
+            <option value="cnpj" style="background:#1e1b4b;color:#fff;">CNPJ</option>
+            <option value="email" style="background:#1e1b4b;color:#fff;">E-mail</option>
+            <option value="telefone" style="background:#1e1b4b;color:#fff;">Telefone</option>
+            <option value="aleatoria" style="background:#1e1b4b;color:#fff;">Chave AleatÃ³ria</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="margin-bottom:0;">
+          <label class="form-label" for="pix-chave">Sua Chave Pix</label>
+          <input type="text" id="pix-chave" class="form-input" placeholder="Digite sua chave Pix" required>
+          <p style="font-size:0.72rem;color:#a3a3a3;margin-top:0.2rem;">Esta chave serÃ¡ exibida para os clientes no momento do pagamento.</p>
+        </div>
+
+        <div class="form-group" style="margin-bottom:0;">
+          <label class="form-label" for="pix-nome">Nome do Titular</label>
+          <input type="text" id="pix-nome" class="form-input" placeholder="Nome que aparece na conta" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom:0;">
+          <label class="form-label" for="pix-cidade">Cidade</label>
+          <input type="text" id="pix-cidade" class="form-input" placeholder="Ex: Sao Paulo" value="Sao Paulo">
+        </div>
+
+        <!-- Status da chave atual -->
+        <div id="pix-status-box" style="display:none;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.25);border-radius:8px;padding:0.65rem 0.85rem;font-size:0.8rem;color:#10b981;display:flex;align-items:center;gap:0.5rem;">
+          <i data-lucide="check-circle" style="width:0.95rem;height:0.95rem;flex-shrink:0;"></i>
+          <span id="pix-status-text">Chave Pix configurada</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;height:2.75rem;margin-top:0.25rem;">
+          <i data-lucide="save" style="width:1.1rem;height:1.1rem;"></i>
+          Salvar Chave Pix
+        </button>
+
+        <button type="button" class="btn btn-secondary" style="width:100%;height:2.35rem;font-size:0.8rem;border-color:rgba(239,68,68,0.3);color:#ef4444;background:rgba(239,68,68,0.05);" onclick="removePixConfig()" id="pix-remove-btn">
+          <i data-lucide="trash-2" style="width:0.9rem;height:0.9rem;"></i>
+          Remover Chave Pix
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin FAB (mobile) -->
+  <button id="admin-fab" style="display:none; position:fixed; bottom:5.5rem; right:1.5rem; z-index:9990; width:3.25rem;height:3.25rem;border-radius:50%;background:linear-gradient(135deg,#02e2ff,#3b82f6);box-shadow:0 4px 20px rgba(2,226,255,0.4);border:none;cursor:pointer;align-items:center;justify-content:center;" onclick="openAdminProductModal(null)" title="Adicionar produto">
+    <i data-lucide="plus" style="width:1.4rem;height:1.4rem;color:#fff;"></i>
+  </button>
+
+  <!-- Scripts -->
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+

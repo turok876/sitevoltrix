@@ -1,0 +1,30 @@
+﻿Created At: 2026-05-28T20:20:22Z
+Completed At: 2026-05-28T20:20:22Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/index.html`
+Total Lines: 884
+Total Bytes: 59919
+Showing lines 515 to 535
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+515:   </main>
+516: 
+517:   <!-- Footer -->
+518:   <footer>
+519:     <div class="container footer-grid">
+520:       <!-- Brand column -->
+521:       <div class="footer-brand">
+522:         <a href="/" class="logo-container">
+523:           <svg viewBox="0 0 100 100" class="logo-img" style="background-color: #0b0a14; padding: 6px; border: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); border-radius: 8px; width: 2.5rem; height: 2.5rem;">
+524:             <defs>
+525:               <linearGradient id="logo-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+526:                 <stop offset="0%" stop-color="#02e2ff" />
+527:                 <stop offset="100%" stop-color="#6366f1" />
+528:               </linearGradient>
+529:             </defs>
+530:             <polygon points="50,15 80,30 80,65 50,85 20,65 20,30" fill="url(#logo-grad-footer)" fill-opacity="0.1" stroke="url(#logo-grad-footer)" stroke-width="4"/>
+531:             <path d="M38 35 H48 C55 35, 55 48, 48 48 H38 Z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+532:             <path d="M52 35 L68 65 M68 35 L52 65" fill="none" stroke="#02e2ff" stroke-width="4.5" stroke-linecap="round"/>
+533:           </svg>
+534:           <h2 style="font-size: 1.15rem; margin: 0;">VOLTRIX STORE</h2>
+535:         </a>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

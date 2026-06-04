@@ -1,0 +1,39 @@
+﻿Created At: 2026-05-29T01:16:18Z
+Completed At: 2026-05-29T01:16:18Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/app.js`
+Total Lines: 1130
+Total Bytes: 41407
+Showing lines 1 to 30
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: // Logic for VOLTRIX STORE
+2: 
+3: // 1. Products Data
+4: const products = [
+5:   // Adicione seus produtos aqui seguindo o formato:
+6:   // {
+7:   //   id: 1,
+8:   //   category: 'contas_codiguim',  // ou: 'sensi_painel', 'assinaturas', 'valorant', 'jogos_steam'
+9:   //   name: 'Nome do Produto',
+10:   //   originalPrice: 100.00,
+11:   //   price: 49.90,
+12:   //   image: 'assets/imagem.png',
+13:   //   svgClass: 'purple',  // cores: 'purple', 'blue', 'red', 'green', 'orange', 'amber'
+14:   //   svgContent: '<svg>...</svg>',
+15:   //   categoryName: 'Nome da Categoria'
+16:   // }
+17: ];
+18: 
+19: // 2. State Management
+20: let cart = [];
+21: let appliedCoupon = null;
+22: let couponsList = {
+23:   'VX10': 0.10,     // 10% OFF
+24:   'VX20': 0.20,     // 20% OFF
+25:   'SENSI50': 0.50,  // 50% OFF
+26:   'VX5': 0.05,      // 5% OFF
+27:   'VX15': 0.15      // 15% OFF
+28: };
+29: 
+30: // Checkout state
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

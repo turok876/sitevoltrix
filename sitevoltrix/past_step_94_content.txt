@@ -1,0 +1,137 @@
+﻿Created At: 2026-05-28T20:20:10Z
+Completed At: 2026-05-28T20:20:10Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/styles.css`
+Total Lines: 2022
+Total Bytes: 39796
+Showing lines 1 to 150
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: /* Custom Design System for VOLTRIX STORE */
+2: 
+3: @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap');
+4: 
+5: :root {
+6:   --primary: 263 90% 52%; /* Violet/Purple */
+7:   --primary-glow: 263 90% 52% / 0.15;
+8:   --secondary: 217 91% 60%; /* Neon Blue */
+9:   --background: 240 10% 4%; /* Near Black Deep Slate */
+10:   --card: 240 10% 6% / 0.7;
+11:   --foreground: 0 0% 98%;
+12:   --muted: 240 5% 15% / 0.5;
+13:   --muted-foreground: 240 5% 65%;
+14:   --border: 240 5% 15% / 0.6;
+15:   --accent: 45 93% 47%; /* Gold Accent */
+16:   --radius: 12px;
+17:   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+18: }
+19: 
+20: /* Base resets & styles */
+21: * {
+22:   box-sizing: border-box;
+23:   margin: 0;
+24:   padding: 0;
+25:   border-color: rgba(255, 255, 255, 0.05);
+26: }
+27: 
+28: html {
+29:   scroll-behavior: smooth;
+30:   overflow-x: hidden;
+31: }
+32: 
+33: body {
+34:   font-family: 'Geist', 'Outfit', sans-serif;
+35:   background-color: hsl(var(--background));
+36:   color: hsl(var(--foreground));
+37:   min-h: 100vh;
+38:   display: flex;
+39:   flex-direction: column;
+40:   line-height: 1.5;
+41:   -webkit-font-smoothing: antialiased;
+42:   background-image: 
+43:     radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+44:     radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 45%);
+45:   background-attachment: fixed;
+46: }
+47: 
+48: a {
+49:   color: inherit;
+50:   text-decoration: none;
+51: }
+52: 
+53: button {
+54:   cursor: pointer;
+55:   font-family: inherit;
+56:   bac
+<truncated 645 bytes>
+ont-size: clamp(2rem, 5vw, 3.5rem);
+81:   line-height: 1.15;
+82:   background: linear-gradient(135deg, #ffffff 40%, #02e2ff 100%);
+83:   -webkit-background-clip: text;
+84:   -webkit-text-fill-color: transparent;
+85:   text-shadow: 0 0 40px rgba(139, 92, 246, 0.1);
+86: }
+87: 
+88: .gradient-text-purple {
+89:   background: linear-gradient(90deg, #02e2ff, #81ccf8);
+90:   -webkit-background-clip: text;
+91:   -webkit-text-fill-color: transparent;
+92: }
+93: 
+94: .hero-desc-shiny {
+95:   background: linear-gradient(
+96:     90deg,
+97:     #a3a3a3 0%,
+98:     #a3a3a3 15%,
+99:     #ffffff 30%,
+100:     #a3a3a3 45%,
+101:     #a3a3a3 50%,
+102:     #a3a3a3 65%,
+103:     #ffffff 80%,
+104:     #a3a3a3 95%,
+105:     #a3a3a3 100%
+106:   );
+107:   background-size: 200% 100%;
+108:   -webkit-background-clip: text;
+109:   -webkit-text-fill-color: transparent;
+110:   animation: hero-shiny 5s linear infinite;
+111: }
+112: 
+113: @keyframes hero-shiny {
+114:   0% { background-position: 100% 50%; }
+115:   100% { background-position: -100% 50%; }
+116: }
+117: 
+118: /* Layout Utilities */
+119: .container {
+120:   width: 100%;
+121:   max-width: 1400px;
+122:   margin-left: auto;
+123:   margin-right: auto;
+124:   padding-left: 1.5rem;
+125:   padding-right: 1.5rem;
+126: }
+127: 
+128: /* Header styling */
+129: header {
+130:   position: sticky;
+131:   top: 0;
+132:   z-index: 50;
+133:   backdrop-filter: blur(16px);
+134:   -webkit-backdrop-filter: blur(16px);
+135:   background-color: rgba(9, 9, 11, 0.75);
+136:   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+137:   padding: 1rem 0;
+138:   transition: var(--transition);
+139: }
+140: 
+141: header.scrolled {
+142:   background-color: rgba(5, 5, 8, 0.9);
+143:   padding: 0.75rem 0;
+144: }
+145: 
+146: .header-nav {
+147:   display: flex;
+148:   align-items: center;
+149:   justify-content: space-between;
+150:   gap: 1.5rem;
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

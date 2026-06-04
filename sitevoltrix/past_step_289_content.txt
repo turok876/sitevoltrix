@@ -1,0 +1,54 @@
+﻿Created At: 2026-05-29T01:28:38Z
+Completed At: 2026-05-29T01:28:39Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/app.js`
+Total Lines: 1166
+Total Bytes: 42492
+Showing lines 1 to 45
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: // Logic for VOLTRIX STORE
+2: 
+3: // 1. Products Data
+4: const products = [
+5:   // Adicione seus produtos aqui seguindo o formato:
+6:   // {
+7:   //   id: 1,
+8:   //   category: 'contas_codiguim',  // ou: 'sensi_painel', 'assinaturas', 'valorant', 'jogos_steam'
+9:   //   name: 'Nome do Produto',
+10:   //   originalPrice: 100.00,
+11:   //   price: 49.90,
+12:   //   image: 'assets/imagem.png',
+13:   //   svgClass: 'purple',  // cores: 'purple', 'blue', 'red', 'green', 'orange', 'amber'
+14:   //   svgContent: '<svg>...</svg>',
+15:   //   categoryName: 'Nome da Categoria'
+16:   // }
+17: ];
+18: 
+19: // 2. State Management
+20: let cart = [];
+21: let appliedCoupon = null;
+22: let couponsList = {
+23:   'VX10': 0.10,     // 10% OFF
+24:   'VX20': 0.20,     // 20% OFF
+25:   'SENSI50': 0.50,  // 50% OFF
+26:   'VX5': 0.05,      // 5% OFF
+27:   'VX15': 0.15      // 15% OFF
+28: };
+29: 
+30: // Checkout state
+31: let currentStep = 1;
+32: let userData = { name: '', email: '', whatsapp: '' };
+33: let checkPaymentInterval = null;
+34: 
+35: // Feedback state
+36: let feedbacks = [];
+37: let selectedRating = 5;
+38: let selectedAvatarType = 'preset';
+39: let selectedAvatarValue = 'https://i.pinimg.com/736x/a6/b9/6d/a6b96d301a7a0914fe657ee9d441692b.jpg';
+40: 
+41: // Initialize App
+42: document.addEventListener('DOMContentLoaded', () => {
+43:   // Load Cart from localStorage
+44:   const savedCart = localStorage.getItem('sitevoltrix_cart');
+45:   if (savedCart) {
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

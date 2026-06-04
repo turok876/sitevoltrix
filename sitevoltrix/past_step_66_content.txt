@@ -1,0 +1,106 @@
+﻿Created At: 2026-05-28T20:15:12Z
+Completed At: 2026-05-28T20:15:12Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/app.js`
+Total Lines: 1130
+Total Bytes: 41350
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: // Logic for VOLTRIX STORE
+2: 
+3: // 1. Products Data
+4: const products = [
+5:   // Adicione seus produtos aqui seguindo o formato:
+6:   // {
+7:   //   id: 1,
+8:   //   category: 'contas_codiguim',  // ou: 'sensi_painel', 'assinaturas', 'valorant', 'jogos_steam'
+9:   //   name: 'Nome do Produto',
+10:   //   originalPrice: 100.00,
+11:   //   price: 49.90,
+12:   //   image: 'assets/imagem.png',
+13:   //   svgClass: 'purple',  // cores: 'purple', 'blue', 'red', 'green', 'orange', 'amber'
+14:   //   svgContent: '<svg>...</svg>',
+15:   //   categoryName: 'Nome da Categoria'
+16:   // }
+17: ];
+18: 
+19: // 2. State Management
+20: let cart = [];
+21: let appliedCoupon = null;
+22: let couponsList = {
+23:   'VX10': 0.10,     // 10% OFF
+24:   'VX20': 0.20,     // 20% OFF
+25:   'SENSI50': 0.50,  // 50% OFF
+26:   'VX5': 0.05,      // 5% OFF
+27:   'VX15': 0.15      // 15% OFF
+28: };
+29: 
+30: // Checkout state
+31: let currentStep = 1;
+32: let userData = { name: '', email: '', whatsapp: '' };
+33: let checkPaymentInterval = null;
+34: 
+35: // Feedback state
+36: let feedbacks = [];
+37: let selectedRating = 5;
+38: let selectedAvatarType = 'preset';
+39: let selectedAvatarValue = 'https://i.pinimg.com/736x/a6/b9/6d/a6b96d301a7a0914fe657ee9d441692b.jpg';
+40: 
+41: // Initialize App
+42: document.addEventListener('DOMContentLoaded', () => {
+43:   // Load Cart from localStorage
+44:   const savedCart = localStorage.getItem('sitevoltrix_cart');
+45:   if (savedCart) {
+46:     try {
+47:       cart = JSON.parse(savedCart);
+48:       updateCartUI();
+49:     } catch (e) {
+50:       cart = [];
+51:     }
+52:   }
+53: 
+54:
+<truncated 31581 bytes>
+"15" height="5" fill="black"/>
+760:             <rect x="70" y="55" width="5" height="10" fill="black"/>
+761:             <rect x="80" y="75" width="10" height="15" fill="black"/>
+762:             <rect x="35" y="75" width="25" height="5" fill="black"/>
+763:             <rect x="45" y="85" width="10" height="5" fill="black"/>
+764:           </svg>
+765:           <div class="pix-copiacola-container">
+766:             <div class="pix-key-text" id="pix-key-val">Carregando cÃ³digo Pix...</div>
+767:             <button class="pix-copy-btn" onclick="copyPixKey()">Copiar</button>
+768:           </div>
+769:           <p class="pix-timer">Aguardando confirmaÃ§Ã£o do pagamento... Expira em: <span class="pix-timer-count" id="pix-timer-val">10:00</span></p>
+770:           <p style="font-size: 0.8rem; color: #a3a3a3; font-style: italic;">(AprovaÃ§Ã£o simulada em 9 segundos para demonstraÃ§Ã£o)</p>
+771:         </div>
+772:       `;
+773:     }
+774:   }, 400);
+775: }
+776: 
+777: // 6. Utility Toast Function
+778: function showToast(message) {
+779:   if (typeof Toastify !== 'undefined') {
+780:     Toastify({
+781:       text: message,
+782:       duration: 3000,
+783:       gravity: 'top', // `top` or `bottom`
+784:       position: 'right', // `left`, `center` or `right`
+785:       style: {
+786:         background: 'linear-gradient(to right, #7c3aed, #4f46e5)',
+787:         color: '#ffffff',
+788:         border: '1px solid rgba(255, 255, 255, 0.1)',
+789:         borderRadius: '8px',
+790:         fontFamily: "'Geist', sans-serif",
+791:         fontSize: '0.85rem',
+792:         fontWeight: '600'
+793:       }
+794:     }).showToast();
+795:   } else {
+796:     // Fallback if toastify fails
+797:     const toast = document.createElement('div');
+798:     toast.textContent = message;
+799:     toast.style.position = 'fixed';
+800:     toast.style.bottom = '2rem';
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
+

@@ -1,0 +1,68 @@
+﻿Created At: 2026-05-28T20:12:51Z
+Completed At: 2026-05-28T20:12:51Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/index.html`
+Total Lines: 994
+Total Bytes: 66059
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <!DOCTYPE html>
+2: <html lang="pt-BR">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6:   <meta name="robots" content="index, follow" />
+7:   
+8:   <!-- SEO Tags -->
+9:   <title>VOLTRIX STORE - A melhor loja de produtos digitais</title>
+10:   <meta name="description" content="A melhor loja de produtos digitais com entrega imediata e suporte eficiente. Codiguin, contas, sensi VIP e muito mais." />
+11:   <meta property="og:type" content="website" />
+12:   <meta property="og:title" content="VOLTRIX STORE - Home" />
+13:   <meta property="og:description" content="A melhor loja de produtos digitais com entrega imediata e suporte eficiente." />
+14:   <meta property="og:site_name" content="VOLTRIX STORE" />
+15:   
+16:   <!-- Favicon -->
+17:   <link rel="icon" type="image/png" href="https://cdn.centralcart.io/stores/13902/theme/f35647c1-8f1f-437f-b02b-0e082db335ae.png" />
+18:   
+19:   <!-- Stylesheets -->
+20:   <link rel="stylesheet" href="styles.css">
+21:   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+22: </head>
+23: <body>
+24: 
+25:   <!-- Floating Background Glows -->
+26:   <div style="position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: -1;">
+27:     <div style="position: absolute; top: -10%; left: -10%; width: 40rem; height: 40rem; border-radius: 50%; background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%); filter: blur(50px);"></div>
+28:     <div style="position: absolute; top: -10%; right: -10%; width: 50re
+<truncated 45283 bytes>
+i.pinimg.com/736x/d3/9d/53/d39d534093527bf9fa1636695598393e.jpg" alt="Avatar User">
+593:               <div class="feedback-details">
+594:                 <div class="feedback-meta">
+595:                   <span class="feedback-username">dapavuna</span>
+596:                   <span class="feedback-platform-badge">
+597:                     <i data-lucide="message-square" style="fill: #58f2f2; color: #58d3f2; width: 0.95rem; height: 0.95rem;"></i>
+598:                     Discord
+599:                   </span>
+600:                 </div>
+601:                 <div class="feedback-stars">
+602:                   <i data-lucide="star" style="fill: currentColor; width: 0.75rem; height: 0.75rem;"></i>
+603:                   <i data-lucide="star" style="fill: currentColor; width: 0.75rem; height: 0.75rem;"></i>
+604:                   <i data-lucide="star" style="fill: currentColor; width: 0.75rem; height: 0.75rem;"></i>
+605:                   <i data-lucide="star" style="fill: currentColor; width: 0.75rem; height: 0.75rem;"></i>
+606:                   <i data-lucide="star" style="fill: currentColor; width: 0.75rem; height: 0.75rem;"></i>
+607:                 </div>
+608:               </div>
+609:             </div>
+610:             <p class="feedback-text">"Sensi VIP realmente faz a diferenÃ§a, mudei a DPI e agora sÃ³ dou capa vermelha no FF."</p>
+611:             <span class="feedback-time">HÃ¡ 1 hora</span>
+612:           </div>
+613: 
+614:           <div class="feedback-card">
+615:             <div class="feedback-user-info">
+616:               <img class="feedback-avatar" src="https://i.pinimg.com/736x/0d/18/d8/0d18d89e5fa472bfa0ee3c9a416bdfc5.jpg" alt="Avatar User">
+617:               <div class="feedback-details">
+618:                 <div class="feedback-meta">
+619:                   <span class="feedback-username">Luiz.Alves</span>
+620:                   <span
+<truncated 10400 bytes>
+
+NOTE: The output was truncated because it was too long. Use a more targeted query or a smaller range to get the information you need.

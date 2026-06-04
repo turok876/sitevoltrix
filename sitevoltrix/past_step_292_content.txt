@@ -1,0 +1,80 @@
+﻿Created At: 2026-05-29T01:29:02Z
+Completed At: 2026-05-29T01:29:02Z
+The following changes were made by the multi_replace_file_content tool to: c:\Users\riel7\Downloads\sitevoltrix\app.js. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -1,21 +1,57 @@
+-// Logic for VOLTRIX STORE
+-
+-// 1. Products Data
+-const products = [
+-  // Adicione seus produtos aqui seguindo o formato:
+-  // {
+-  //   id: 1,
+-  //   category: 'contas_codiguim',  // ou: 'sensi_painel', 'assinaturas', 'valorant', 'jogos_steam'
+-  //   name: 'Nome do Produto',
+-  //   originalPrice: 100.00,
+-  //   price: 49.90,
+-  //   image: 'assets/imagem.png',
+-  //   svgClass: 'purple',  // cores: 'purple', 'blue', 'red', 'green', 'orange', 'amber'
+-  //   svgContent: '<svg>...</svg>',
+-  //   categoryName: 'Nome da Categoria'
++// ============================================================
++//  VOLTRIX STORE â€” App Logic
++// ============================================================
++
++// ============================================================
++//  ADMIN CONFIG â€” edite aqui para personalizar
++// ============================================================
++const ADMIN_CONFIG = {
++  // ----- OPÃ‡ÃƒO A: Chave secreta local (ativa agora) -----
++  mode: 'local',                    // 'local' ou 'firebase'
++  secretKey: 'voltrix-admin-2025',  // ðŸ”‘ Mude para sua senha secreta!
++
++  // ----- OPÃ‡ÃƒO B: Firebase Auth (ativar quando hospedar) -----
++  // Para ativar: mude mode para 'firebase' e preencha os dados abaixo
++  // adminEmail: 'seuemail@gmail.com', // Seu e-mail Google autorizado como admin
++  // firebaseConfig: {
++  //   apiKey: 'SUA_API_KEY',
++  //   authDomain: 'seu-projeto.firebaseapp.com',
++  //   projectId: 'seu-projeto',
++  //   storageBucket: 'seu-projeto.appspot.com',
++  //   messagingSenderId: '000000000000',
++  //   appId: '1:000000000000:web:xxxxxxxxxxxxxxxx'
+   // }
++};
++// ============================================================
++
++// 1. Products â€” carregados do localStorage (admin pode editar pelo site)
++const DEFAULT_PRODUCTS = [
++  // Produtos padrÃ£o (sÃ³ usados se nÃ£o houver nada no localStorage)
++  // Exemplo:
++  // { id: 1, category: 'contas_codiguim', name: 'Codiguim x50',
++  //   originalPrice: 29.90, price: 14.90, svgClass: 'blue', svgContent: '', categoryName: 'Contas & Codiguim' }
+ ];
+ 
++let products = [];
++
++function loadProducts() {
++  const saved = localStorage.getItem('sitevoltrix_products');
++  if (saved) {
++    try { products = JSON.parse(saved); } catch(e) { products = [...DEFAULT_PRODUCTS]; }
++  } else {
++    products = [...DEFAULT_PRODUCTS];
++  }
++}
++
++function saveProducts() {
++  localStorage.setItem('sitevoltrix_products', JSON.stringify(products));
++}
++
++function getNextProductId() {
++  if (products.length === 0) return 1;
++  return Math.max(...products.map(p => p.id)) + 1;
++}
++
+ // 2. State Management
+ let cart = [];
+ let appliedCoupon = null;
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

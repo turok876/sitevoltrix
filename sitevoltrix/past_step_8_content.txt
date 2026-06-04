@@ -1,0 +1,117 @@
+﻿Created At: 2026-05-28T20:12:49Z
+Completed At: 2026-05-28T20:12:49Z
+File Path: `file:///c:/Users/riel7/Downloads/sitevoltrix/app.js`
+Total Lines: 800
+Total Bytes: 31201
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: // Logic for VOLTRIX STORE
+2: 
+3: // 1. Products Data
+4: const products = [
+5:   // Adicione seus produtos aqui seguindo o formato:
+6:   // {
+7:   //   id: 1,
+8:   //   category: 'contas_codiguim',  // ou: 'sensi_painel', 'assinaturas', 'valorant', 'jogos_steam'
+9:   //   name: 'Nome do Produto',
+10:   //   originalPrice: 100.00,
+11:   //   price: 49.90,
+12:   //   image: 'assets/imagem.png',
+13:   //   svgClass: 'purple',  // cores: 'purple', 'blue', 'red', 'green', 'orange', 'amber'
+14:   //   svgContent: '<svg>...</svg>',
+15:   //   categoryName: 'Nome da Categoria'
+16:   // }
+17: ];
+18: 
+19: // 2. State Management
+20: let cart = [];
+21: let appliedCoupon = null;
+22: let couponsList = {
+23:   'VX10': 0.10,     // 10% OFF
+24:   'VX20': 0.20,     // 20% OFF
+25:   'SENSI50': 0.50,  // 50% OFF
+26:   'VX5': 0.05,      // 5% OFF
+27:   'VX15': 0.15      // 15% OFF
+28: };
+29: 
+30: // Checkout state
+31: let currentStep = 1;
+32: let userData = { name: '', email: '', whatsapp: '' };
+33: let checkPaymentInterval = null;
+34: 
+35: // Initialize App
+36: document.addEventListener('DOMContentLoaded', () => {
+37:   // Load Cart from localStorage
+38:   const savedCart = localStorage.getItem('sitevoltrix_cart');
+39:   if (savedCart) {
+40:     try {
+41:       cart = JSON.parse(savedCart);
+42:       updateCartUI();
+43:     } catch (e) {
+44:       cart = [];
+45:     }
+46:   }
+47: 
+48:   // Render Product Grids
+49:   renderProductGrids();
+50: 
+51:   // Load Lucide Icons
+52:   if (typeof lucide !== 'undefined') {
+53:     lucide.createIcons();
+54:   }
+55: 
+56:   // Set up Event Listeners
+57:   setupEventLis
+<truncated 31514 bytes>
+height="5" fill="black"/>
+752:           </svg>
+753:           <div class="pix-copiacola-container">
+754:             <div class="pix-key-text" id="pix-key-val">Carregando cÃ³digo Pix...</div>
+755:             <button class="pix-copy-btn" onclick="copyPixKey()">Copiar</button>
+756:           </div>
+757:           <p class="pix-timer">Aguardando confirmaÃ§Ã£o do pagamento... Expira em: <span class="pix-timer-count" id="pix-timer-val">10:00</span></p>
+758:           <p style="font-size: 0.8rem; color: #a3a3a3; font-style: italic;">(AprovaÃ§Ã£o simulada em 9 segundos para demonstraÃ§Ã£o)</p>
+759:         </div>
+760:       `;
+761:     }
+762:   }, 400);
+763: }
+764: 
+765: // 6. Utility Toast Function
+766: function showToast(message) {
+767:   if (typeof Toastify !== 'undefined') {
+768:     Toastify({
+769:       text: message,
+770:       duration: 3000,
+771:       gravity: 'top', // `top` or `bottom`
+772:       position: 'right', // `left`, `center` or `right`
+773:       style: {
+774:         background: 'linear-gradient(to right, #7c3aed, #4f46e5)',
+775:         color: '#ffffff',
+776:         border: '1px solid rgba(255, 255, 255, 0.1)',
+777:         borderRadius: '8px',
+778:         fontFamily: "'Geist', sans-serif",
+779:         fontSize: '0.85rem',
+780:         fontWeight: '600'
+781:       }
+782:     }).showToast();
+783:   } else {
+784:     // Fallback if toastify fails
+785:     const toast = document.createElement('div');
+786:     toast.textContent = message;
+787:     toast.style.position = 'fixed';
+788:     toast.style.bottom = '2rem';
+789:     toast.style.left = '2rem';
+790:     toast.style.background = '#7c3aed';
+791:     toast.style.color = 'white';
+792:     toast.style.padding = '0.75rem 1.25rem';
+793:     toast.style.borderRadius = '8px';
+794:     toast.style.zIndex = '9999';
+795:     toast.style.fontWeight = 'bold';
+796:     document.body.appendChild(toast);
+797:     setTimeout(() => toast.remove(), 3000);
+798:   }
+799: }
+800: 
+The above content shows the entire, complete file contents of the requested file.
+

@@ -1,0 +1,372 @@
+  var pixConfig = loadPixConfig();
+  var pixCopyPaste;
+
+  if (pixConfig && pixConfig.chave) {
+    pixCopyPaste = generatePixCode(pixConfig.chave, pixConfig.nome || 'VOLTRIX STORE', pixConfig.cidade || 'Sao Paulo', calculateTotal());
+  } else {
+    pixCopyPaste = '00020101021226930014br.gov.bcb.pix2571pix-sitevoltrix@intermediador.com52040000530398654050.005802BR5915VX_VENDAS_CLONE6009Sao_Paulo62070503***6304' + Math.floor(1000 + Math.random() * 9000).toString(16).toUpperCase();
+  }
+
+// ==================== ADMIN SYSTEM ====================
+
+// ----- Session -----
+function checkAdminSession() {
+  const session = sessionStorage.getItem('vx_admin');
+  if (session === 'true') {
+    adminLoggedIn = true;
+    updateAdminUI();
+  }
+}
+
+function isAdmin() { return adminLoggedIn; }
+
+// ----- Login (Op��o A � Chave secreta) -----
+function submitAdminLogin() {
+  const input = document.getElementById('admin-key-input');
+  if (!input) return;
+  const key = input.value.trim();
+
+  if (ADMIN_CONFIG.mode === 'local') {
+    if (key === ADMIN_CONFIG.secretKey) {
+      adminLoggedIn = true;
+      sessionStorage.setItem('vx_admin', 'true');
+      closeLoginModal(null, true);
+      updateAdminUI();
+      renderProductGrids();
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+      showToast('? Modo admin ativado! Bem-vindo, dono(a)!');
+    } else {
+      input.style.borderColor = '#ef4444';
+      input.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.2)';
+      setTimeout(() => {
+        input.style.borderColor = '';
+        input.style.boxShadow = '';
+      }, 1500);
+      showToast('? Senha incorreta. Tente novamente.');
+    }
+  }
+}
+
+function logoutAdmin() {
+  adminLoggedIn = false;
+  sessionStorage.removeItem('vx_admin');
+  updateAdminUI();
+  renderProductGrids();
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+  showToast('Saiu do modo admin.');
+}
+
+// ----- UI admin header -----
+function updateAdminUI() {
+  const btn = document.getElementById('btn-entrar');
+  const fab = document.getElementById('admin-fab');
+  const adminBar = document.getElementById('admin-bar');
+
+  if (adminLoggedIn) {
+    if (btn) {
+      btn.innerHTML = '<i data-lucide="shield-check" style="width:1.1rem;height:1.1rem;color:#02e2ff;"></i><span class="hide-mobile" style="color:#02e2ff;">Admin</span>';
+      btn.onclick = logoutAdmin;
+      btn.title = 'Clique para sair do admin';
+    }
+    if (fab) fab.style.display = 'flex';
+    if (adminBar) adminBar.style.display = 'flex';
+  } else {
+    if (btn) {
+      btn.innerHTML = '<i data-lucide="user" style="width:1.1rem;height:1.1rem;"></i><span class="hide-mobile">Entrar</span>';
+      btn.onclick = openLoginModal;
+      btn.title = '';
+    }
+    if (fab) fab.style.display = 'none';
+    if (adminBar) adminBar.style.display = 'none';
+  }
+
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+}
+
+// ----- CRUD Produtos -----
+function deleteProduct(id) {
+  if (!adminLoggedIn) return;
+  const prod = products.find(p => p.id === id);
+  if (!prod) return;
+  if (!confirm('Tem certeza que deseja deletar "' + prod.name + '"?')) return;
+  products = products.filter(p => p.id !== id);
+  saveProducts();
+  renderProductGrids();
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+  showToast('Produto deletado.');
+}
+
+function saveAdminProduct(event) {
+  event.preventDefault();
+  if (!adminLoggedIn) return;
+
+  const name        = document.getElementById('ap-name').value.trim();
+  const category    = document.getElementById('ap-category').value;
+  const categoryName= document.getElementById('ap-category').options[document.getElementById('ap-category').selectedIndex].text;
+  const origPrice   = parseFloat(document.getElementById('ap-orig-price').value);
+  const price       = parseFloat(document.getElementById('ap-price').value);
+  const svgClass    = document.getElementById('ap-color').value;
+  const image       = document.getElementById('ap-image').value.trim();
+
+  if (!name || isNaN(origPrice) || isNaN(price) || origPrice <= 0 || price <= 0) {
+    showToast('Preencha todos os campos corretamente.');
+    return;
+  }
+
+  if (adminEditingProductId !== null) {
+    // Editando produto existente
+    const idx = products.findIndex(p => p.id === adminEditingProductId);
+    if (idx !== -1) {
+      products[idx] = { ...products[idx], name, category, categoryName, originalPrice: origPrice, price, svgClass, svgContent: '', image };
+    }
+    showToast('? Produto atualizado!');
+  } else {
+    // Novo produto
+    products.push({
+      id: getNextProductId(),
+      category,
+      categoryName,
+      name,
+      originalPrice: origPrice,
+      price,
+      svgClass,
+      svgContent: '',
+      image
+    });
+    showToast('? Produto adicionado!');
+  }
+
+  saveProducts();
+  closeAdminProductModal();
+  renderProductGrids();
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+}
+
+// ----- Modal de produto (admin) -----
+function openAdminProductModal(productId, presetCategory) {
+  if (!adminLoggedIn) return;
+  adminEditingProductId = productId || null;
+
+  const modal = document.getElementById('admin-product-modal');
+  const title = document.getElementById('ap-modal-title');
+  const form  = document.getElementById('admin-product-form');
+  if (!modal || !form) return;
+
+  form.reset();
+
+  if (productId !== null && productId !== undefined) {
+    const p = products.find(pr => pr.id === productId);
+    if (p) {
+      title.textContent = 'Editar Produto';
+      document.getElementById('ap-name').value      = p.name;
+      document.getElementById('ap-category').value  = p.category;
+      document.getElementById('ap-orig-price').value= p.originalPrice;
+      document.getElementById('ap-price').value     = p.price;
+      document.getElementById('ap-color').value     = p.svgClass;
+      document.getElementById('ap-image').value     = p.image || '';
+    }
+  } else {
+    title.textContent = 'Adicionar Produto';
+    if (presetCategory) document.getElementById('ap-category').value = presetCategory;
+  }
+
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAdminProductModal() {
+  const modal = document.getElementById('admin-product-modal');
+  if (modal) modal.classList.remove('active');
+  document.body.style.overflow = '';
+  adminEditingProductId = null;
+}
+
+// Switch entre aba usu�rio e aba admin no modal de login
+function switchLoginTab(tab) {
+  const userTab  = document.getElementById('login-tab-user');
+  const adminTab = document.getElementById('login-tab-admin');
+  const userPane = document.getElementById('login-pane-user');
+  const adminPane= document.getElementById('login-pane-admin');
+
+  if (tab === 'user') {
+    userTab.classList.add('active');
+    adminTab.classList.remove('active');
+    userPane.style.display = 'block';
+    adminPane.style.display = 'none';
+  } else {
+    adminTab.classList.add('active');
+    userTab.classList.remove('active');
+    adminPane.style.display = 'block';
+    userPane.style.display = 'none';
+  }
+}
+
+
+// ==================== PIX CONFIG SYSTEM ====================
+
+function loadPixConfig() {
+  var saved = localStorage.getItem('sitevoltrix_pix_config');
+  if (saved) {
+    try { return JSON.parse(saved); } catch(e) { return null; }
+  }
+  return null;
+}
+
+function savePixConfigToStorage(config) {
+  localStorage.setItem('sitevoltrix_pix_config', JSON.stringify(config));
+}
+
+function openPixConfigModal() {
+  if (!adminLoggedIn) return;
+  var modal = document.getElementById('pix-config-modal');
+  if (!modal) return;
+
+  var config = loadPixConfig();
+  if (config) {
+    var tipoSelect = document.getElementById('pix-tipo');
+    var chaveInput = document.getElementById('pix-chave');
+    var nomeInput = document.getElementById('pix-nome');
+    var cidadeInput = document.getElementById('pix-cidade');
+    var statusBox = document.getElementById('pix-status-box');
+    var statusText = document.getElementById('pix-status-text');
+    var removeBtn = document.getElementById('pix-remove-btn');
+
+    if (tipoSelect) tipoSelect.value = config.tipo || 'cpf';
+    if (chaveInput) chaveInput.value = config.chave || '';
+    if (nomeInput) nomeInput.value = config.nome || '';
+    if (cidadeInput) cidadeInput.value = config.cidade || 'Sao Paulo';
+
+    if (statusBox && config.chave) {
+      statusBox.style.display = 'flex';
+      var tipoLabel = {'cpf':'CPF','cnpj':'CNPJ','email':'E-mail','telefone':'Telefone','aleatoria':'Chave Aleatoria'};
+      if (statusText) statusText.textContent = 'Chave ' + (tipoLabel[config.tipo] || 'Pix') + ' configurada: ' + maskPixKey(config.chave, config.tipo);
+    }
+    if (removeBtn) removeBtn.style.display = 'flex';
+  } else {
+    var statusBox2 = document.getElementById('pix-status-box');
+    var removeBtn2 = document.getElementById('pix-remove-btn');
+    if (statusBox2) statusBox2.style.display = 'none';
+    if (removeBtn2) removeBtn2.style.display = 'none';
+    var form = document.getElementById('pix-config-form');
+    if (form) form.reset();
+  }
+
+  modal.style.display = 'flex';
+  requestAnimationFrame(function() { modal.classList.add('open'); });
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+}
+
+function closePixConfigModal() {
+  var modal = document.getElementById('pix-config-modal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  setTimeout(function() { modal.style.display = 'none'; }, 300);
+}
+
+function savePixConfig(event) {
+  event.preventDefault();
+  if (!adminLoggedIn) return;
+
+  var tipo = document.getElementById('pix-tipo').value;
+  var chave = document.getElementById('pix-chave').value.trim();
+  var nome = document.getElementById('pix-nome').value.trim();
+  var cidade = document.getElementById('pix-cidade').value.trim() || 'Sao Paulo';
+
+  if (!chave || !nome) {
+    showToast('Preencha a chave Pix e o nome do titular.');
+    return;
+  }
+
+  var config = { tipo: tipo, chave: chave, nome: nome, cidade: cidade };
+  savePixConfigToStorage(config);
+  pixConfig = config;
+  pixCopyPaste = generatePixCode(config.chave, config.nome || 'VOLTRIX STORE', config.cidade || 'Sao Paulo', calculateTotal());
+  showToast('Chave Pix salva com sucesso! Os pagamentos agora vao para sua conta.');
+  closePixConfigModal();
+}
+
+function removePixConfig() {
+  if (!adminLoggedIn) return;
+  if (!confirm('Tem certeza que deseja remover a chave Pix?')) return;
+  localStorage.removeItem('sitevoltrix_pix_config');
+  pixConfig = null;
+  pixCopyPaste = '00020101021226930014br.gov.bcb.pix2571pix-sitevoltrix@intermediador.com52040000530398654050.005802BR5915VX_VENDAS_CLONE6009Sao_Paulo62070503***6304' + Math.floor(1000 + Math.random() * 9000).toString(16).toUpperCase();
+  showToast('Chave Pix removida.');
+  closePixConfigModal();
+}
+
+function maskPixKey(chave, tipo) {
+  if (!chave) return '***';
+  if (tipo === 'cpf' && chave.length >= 6) {
+    return chave.substring(0, 3) + '.***.***-' + chave.slice(-2);
+  }
+  if (tipo === 'email' && chave.includes('@')) {
+    var parts = chave.split('@');
+    return parts[0].substring(0, 2) + '***@' + parts[1];
+  }
+  if (tipo === 'telefone' && chave.length >= 6) {
+    return chave.substring(0, 4) + '****' + chave.slice(-2);
+  }
+  if (chave.length > 8) {
+    return chave.substring(0, 4) + '****' + chave.slice(-4);
+  }
+  return chave.substring(0, 3) + '***';
+}
+
+// Gerar codigo Pix EMV (Copia e Cola)
+function generatePixCode(chave, nome, cidade, valor) {
+  function tlv(id, value) {
+    var len = value.length.toString().padStart(2, '0');
+    return id + len + value;
+  }
+
+  var payload = '';
+  payload += tlv('00', '01');
+  payload += tlv('01', '12');
+
+  var gui = tlv('00', 'br.gov.bcb.pix');
+  var key = tlv('01', chave);
+  payload += tlv('26', gui + key);
+
+  payload += tlv('52', '0000');
+  payload += tlv('53', '986');
+
+  if (valor > 0) {
+    payload += tlv('54', valor.toFixed(2));
+  }
+
+  payload += tlv('58', 'BR');
+
+  var nomeClean = nome.substring(0, 25).replace(/[^a-zA-Z0-9 ]/g, '').toUpperCase();
+  payload += tlv('59', nomeClean);
+
+  var cidadeClean = cidade.substring(0, 15).replace(/[^a-zA-Z0-9 ]/g, '').toUpperCase();
+  payload += tlv('60', cidadeClean);
+
+  payload += tlv('62', tlv('05', '***'));
+
+  payload += '6304';
+
+  var crc = crc16CCITT(payload);
+  payload += crc;
+
+  return payload;
+}
+
+function crc16CCITT(str) {
+  var crc = 0xFFFF;
+  for (var i = 0; i < str.length; i++) {
+    crc ^= str.charCodeAt(i) << 8;
+    for (var j = 0; j < 8; j++) {
+      if (crc & 0x8000) {
+        crc = (crc << 1) ^ 0x1021;
+      } else {
+        crc <<= 1;
+      }
+      crc &= 0xFFFF;
+    }
+  }
+  return crc.toString(16).toUpperCase().padStart(4, '0');
+}
+
+// ==================== /ADMIN SYSTEM ====================
